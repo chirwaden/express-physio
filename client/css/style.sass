@@ -1,5 +1,5 @@
 // Global imports
-@import url('https://fonts.googleapis.com/css?family=Open+Sans')
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,800')
 @import color
 
 // Component imports
@@ -7,9 +7,33 @@
 
 
 // Global Sass
+*, *:before, *:after 
+    box-sizing: inherit
+
+html
+    box-sizing: border-box
+    height: 100vh
+    font-size: 14px
+
+body
+    margin: 0
+
 #app
     font-family: 'Open Sans', sans-serif
     color: $grey
+    height: 100vh
+
+.container
+    justify-content: flex-start
+    align-content: flex-start
+    flex-direction: row
+    height: 100vh
+
+h1
+    font-size: 32px
+    font-weight: 400
+    
+
 
 
 
