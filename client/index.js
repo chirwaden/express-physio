@@ -4,5 +4,6 @@ import App from './components/App';
 import { Router, browserHistory } from 'react-router';
 
 import routes from './routes';
+require('./css/style.sass');
 
 render(<Router history={browserHistory} routes={routes}/>, document.getElementById('app')); 
