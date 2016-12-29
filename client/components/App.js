@@ -1,5 +1,5 @@
 import React from 'react';
-import NavigationBar from './navigation_bar/NavigationBar';
+import NavigationBar from './NavigationBar/NavigationBar';
 import Greetings from './Greetings';
 
 class App extends React.Component {
