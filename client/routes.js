@@ -1,16 +1,16 @@
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
 
-import App from './components/App';
-import Greetings from './components/Greetings';
-import SignupPage from './components/Page__Signup/SignupPage';
-import ClientsPage from './components/Page__Clients/ClientsPage';
-import UsersPage from './components/Page__Users/UsersPage';
-import BusinessPage from './components/Page__Business/BusinessPage';
+import App from './pages/App';
+import Dashboard from './pages/Dashboard/DashboardPage';
+import SignupPage from './pages/Signup/SignupPage';
+import ClientsPage from './pages/Clients/ClientsPage';
+import UsersPage from './pages/Users/UsersPage';
+import BusinessPage from './pages/Business/BusinessPage';
 
 export default (
     <Route path="/" component={App}>
-        <IndexRoute component={Greetings} />
+        <IndexRoute component={Dashboard} />
         <Route path="signup" component={SignupPage} />
         <Route path="clients" component={ClientsPage} />
         <Route path="users" component={UsersPage} />

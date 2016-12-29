@@ -1,6 +1,6 @@
 import React from 'react';
-import NavigationBar from './NavigationBar/NavigationBar';
-import Greetings from './Greetings';
+import NavigationBar from '../components/NavigationBar/NavigationBar';
+import Dashboard from '../pages/Dashboard/DashboardPage';
 
 class App extends React.Component {
     render() {
