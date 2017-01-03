@@ -1,13 +1,30 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const Main = styled.main`
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: calc(100% - 160px);
+    padding: 20px;
+`;
+
+const MainWrapper = styled.section`
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    width: 100vw;
+    max-width: 1400px;
+`;
 
 class DashboardPage extends React.Component {
     render() {
         return (
-            <div className="row">
-                <div className="col-md-4 col-md-offset-4">
+            <Main>
+                <MainWrapper>
                 <h1>Dashboard Page</h1>
-                </div>
-            </div>
+                </MainWrapper>
+            </Main>
         
         );
     }   

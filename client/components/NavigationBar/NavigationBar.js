@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import styled from 'styled-components';
 
-const Wrapper = styled.section`
+const Wrapper = styled.nav`
     display: flex;
     justify-content: center;
     width: 100vw;
@@ -25,7 +25,7 @@ const NavWrapper = styled.section`
         width: 100%;
 
         > .navigationBar {
-            margin: 20px;
+          margin-top:20px;
         
             > a {
                 color: #FFFFFF !important;
@@ -33,9 +33,11 @@ const NavWrapper = styled.section`
                 text-transform: uppercase;
                 font-size: 1em;
                 font-weight: 300;
+                padding: 20px;
             }
             > a:hover {
-                text-decoration: underline;
+                text-decoration: none;
+                opacity: 0.7;
             }
         } 
     }
