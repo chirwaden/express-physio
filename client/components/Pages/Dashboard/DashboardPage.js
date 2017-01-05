@@ -9,7 +9,7 @@ class DashboardPage extends React.Component {
                 <div className="PageLocation">
                     <div className="PageLocationWrapper">
                         
-                        <h1>Dashboard Page</h1>
+                        <h1>Dashboard</h1>
                     </div>
                 </div>
                 <div className="PageWrapper">

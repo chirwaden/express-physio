@@ -8,7 +8,7 @@ class UsersPage extends React.Component {
             <Main>
                 <div className="PageLocation">
                     <div className="PageLocationWrapper">
-                        <h1>Users Page</h1>
+                        <h1>Users</h1>
                     </div>
                 </div>
                 <div className="PageWrapper">

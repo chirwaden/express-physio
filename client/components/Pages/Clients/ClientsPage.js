@@ -8,7 +8,7 @@ class ClientsPage extends React.Component {
             <Main>
                 <div className="PageLocation">
                     <div className="PageLocationWrapper">
-                        <h1>Clients Page</h1>
+                        <h1>Clients</h1>
                     </div>
                 </div>
                 <div className="PageWrapper">

@@ -34,6 +34,14 @@ const NavWrapper = styled.section`
 
     > .username {
         justify-content: flex-end;
+
+        > .navigationBar {
+            > a:hover  {
+                text-decoration: none;
+                opacity: 0.5;
+                transition: opacity .2s ease-in-out;
+            }
+        }
     }
 `;
 

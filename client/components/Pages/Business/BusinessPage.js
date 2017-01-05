@@ -8,7 +8,7 @@ class BusinessPage extends React.Component {
             <Main>
                 <div className="PageLocation">
                     <div className="PageLocationWrapper">
-                        <h1>Business Page</h1>
+                        <h1>Business</h1>
                     </div>
                 </div>
                 <div className="PageWrapper">
