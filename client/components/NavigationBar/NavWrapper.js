@@ -1,0 +1,40 @@
+import styled from 'styled-components';
+
+const NavWrapper = styled.section`
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    width: 100vw;
+    max-width: 1400px;
+    
+    > .navigationBar_bar {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+
+        > .navigationBar {
+          margin-top:20px;
+        
+            > a {
+                color: #FFFFFF !important;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 1em;
+                font-weight: 300;
+                padding: 20px;
+            }
+            > a:hover {
+                text-decoration: none;
+                opacity: 0.7;
+            }
+        } 
+    }
+
+    > .username {
+        justify-content: flex-end;
+    }
+`;
+
+export default NavWrapper;

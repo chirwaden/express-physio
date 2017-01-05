@@ -1,9 +1,10 @@
 import React from 'react';
 import { render } from 'react-dom';
-import App from './pages/App';
+import App from './components/Pages/App';
 import { Router, browserHistory } from 'react-router';
+import ReactDOM from 'react-dom';
 
 import routes from './routes';
-require('./css/style.sass');
+// require('./css/style.sass');
 
-render(<Router history={browserHistory} routes={routes}/>, document.getElementById('app')); 
+ReactDOM.render(<Router history={browserHistory} routes={routes}/>, document.getElementById('app')); 
