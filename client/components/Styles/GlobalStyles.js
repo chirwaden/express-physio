@@ -19,8 +19,36 @@ injectGlobal`
     }
     h1 {
         font-size: 32px;
+        font-weight: 400;
+        margin: 0px;
+    }
+    h2 {
+        font-size: 28px;
         font-weight: 300;
         margin: 0px;
+    }
+    .subText {
+        font-wight: 300;
+    }
+    label {
+        font-size:12px;
+        font-weight: 400;
+        text-transform: Uppercase;
+    }
+    input {
+        border: 1px solid #9E9E9E;
+        color: #47525D;
+        font-size: 16px;
+        font-weight: 300;
+        padding: 14px;
+        border-radius: 3px;
+        width: 100%;
+        margin: 7px 0px 30px 0px;
+
+        &:focus{
+            outline:none;
+            border: 1px solid #4BBC73;
+        }
     }
 `
 

@@ -6,7 +6,7 @@ const Main = styled.section`
     flex-direction: column;
     width: 100vw;
     height: clac(100vh - 60px);
-    padding: 0px 0px 20px 0px;
+    padding: 0px 0px 0px 0px;
      
 
     .PageWrapper {
@@ -16,12 +16,14 @@ const Main = styled.section`
         width: 100vw;
         max-width: 1400px;
         padding: 0px 20px;
+        margin: 0px;
+        height: calc(100vh - 122px);
     }
     
     .PageLocation {
         flex: 1;
         display: flex;
-        justify-content: center
+        justify-content: center;
         width: 100vw;
         color: #FFFFFF;
         background-color:#007EE5;
@@ -35,6 +37,7 @@ const Main = styled.section`
         max-width: 1400px;
         padding: 0px 20px 20px 20px;
         color: #FFFFFF;
+        
     }
 `;
 

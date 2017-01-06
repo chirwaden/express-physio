@@ -11,9 +11,9 @@ import BusinessPage from './components/Pages/Business/BusinessPage';
 export default (
     <Route path="/" component={App}>
         <IndexRoute component={Dashboard} />
-        <Route path="signup" component={SignupPage} />
         <Route path="clients" component={ClientsPage} />
         <Route path="users" component={UsersPage} />
         <Route path="business" component={BusinessPage} />
+        <Route path="signup" component={SignupPage} />
     </Route>
 )

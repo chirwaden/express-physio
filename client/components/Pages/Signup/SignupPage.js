@@ -1,14 +1,26 @@
 import React from 'react';
 import SignupForm from './SignupForm';
+import styled from 'styled-components';
+// import Main from '../PagesWrapper';
+
+const Wrapper = styled.div`
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
 
 class SignupPage extends React.Component {
     render() {
         return (
-            <div className="row">
-                <div className="col-md-4 col-md-offset-4">
-                    <SignupForm />
+
+            // <Main>
+                <div>
+                    <Wrapper>
+                        <SignupForm />
+                    </Wrapper>
                 </div>
-            </div>
+            // </Main>
         
         );
     }   
