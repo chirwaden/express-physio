@@ -24,11 +24,14 @@ injectGlobal`
     }
     h2 {
         font-size: 28px;
-        font-weight: 300;
+        font-weight: 400;
         margin: 0px;
+        line-height:28px;
     }
     .subText {
-        font-wight: 300;
+        line-height: 0px;
+        margin-bottom: 40px;
+        font-weight: 300;
     }
     label {
         font-size:12px;

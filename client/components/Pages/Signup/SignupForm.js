@@ -15,10 +15,7 @@ const FormWrapper = styled.div`
             margin: 0px;
             line-height:28px;
         }
-        .subText {
-          line-height: 0px;
-          margin-bottom: 40px;
-        }
+        
         
     }
 `;
@@ -28,10 +25,8 @@ constructor(props) {
     super(props);
     this.state = {
         name:'',
-        username:'',
         email:'',
-        password:'',
-        passwordConfirmation:''
+        password:''
     }
 
     this.onChange = this.onChange.bind(this);
@@ -51,16 +46,16 @@ onSubmit(e) {
         return (
             <FormWrapper>
                 <form onSubmit={this.onSubmit}>
-                    <h2>Create your Express Physio account.</h2>
+                    <h2>Get started</h2>
                     <p className="subText">Enter your details below.</p>
                     <div>
                         <label>Name</label>
                         <input value={this.state.name} onChange={this.onChange} type="text" name="name"/>
                     </div>
-                    <div>
-                        <label>Username</label>
-                        <input value={this.state.username} onChange={this.onChange} type="text" name="username"/>
-                    </div>
+                     {/*<div>
+                         <label>Username</label>
+                         <input value={this.state.username} onChange={this.onChange} type="text" name="username"/>
+                     </div>*/}
                     <div>
                         <label>Email</label>
                         <input value={this.state.email} onChange={this.onChange} type="text" name="email"/>
@@ -69,10 +64,10 @@ onSubmit(e) {
                         <label>Password</label>
                         <input value={this.state.password} onChange={this.onChange} type="password" name="password"/>
                     </div>
-                    <div>
+                    {/*<div>
                         <label>Password Confirmation</label>
                         <input value={this.state.passwordConfirmation} onChange={this.onChange} type="password" name="passwordConfirmation"/>
-                    </div>
+                    </div>*/}
                     <div>
                     <button>Sign up</button>
 
