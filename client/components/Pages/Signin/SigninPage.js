@@ -1,5 +1,5 @@
 import React from 'react';
-import SignupForm from './SignupForm';
+import SigninForm from './SigninForm';
 import TopMenu from './TopMenu';
 import styled from 'styled-components';
 
@@ -11,7 +11,7 @@ const Wrapper = styled.div`
     align-items: center;
     height: 100vh;
 
-    > SignupForm {
+    > SigninForm {
         flex: 1;
         display: flex;
         justify-content: center;
@@ -39,24 +39,24 @@ const Wrapper = styled.div`
 
 `;
 
-class SignupPage extends React.Component {
+class SigninPage extends React.Component {
     render() {
         return (
 
             // <Main>
-                <div>
+               
                     <Wrapper>
                         <div className="leftBanner"></div>
                         <div className="mainBody">
                             <TopMenu />
-                            <SignupForm />
+                            <SigninForm />
                         </div>
                     </Wrapper>
-                </div>
+              
             // </Main>
         
         );
     }   
 }
 
-export default SignupPage;
+export default SigninPage;

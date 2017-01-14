@@ -6,9 +6,7 @@ import Wrapper from '../Styles/GlobalStyles';
 class App extends React.Component {
     render() {
         return (
-            
             <Wrapper>
-             
                 {this.props.children}
             </Wrapper>
             

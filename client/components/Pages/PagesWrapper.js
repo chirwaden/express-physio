@@ -13,11 +13,13 @@ const Main = styled.section`
         flex: 1;
         display: flex;
         justify-content: flex-start;
+        flex-direction: column;
         width: 100vw;
         max-width: 1400px;
         padding: 0px 20px;
         margin: 0px;
         height: calc(100vh - 122px);
+        overflow-y:scroll;
     }
     
     .PageLocation {

@@ -17,20 +17,19 @@ const FormWrapper = styled.div`
 
     form {
         width: 80%;
-        max-width: 500px;
+        max-width: 500px; 
 
         h2{
             margin: 0px;
             line-height:28px;
-        } 
+        }
     }
 `;
 
-class SignupForm extends React.Component {
+class SigninForm extends React.Component {
 constructor(props) {
     super(props);
     this.state = {
-        name:'',
         email:'',
         password:''
     }
@@ -52,16 +51,8 @@ onSubmit(e) {
         return (
             <FormWrapper>
                 <form onSubmit={this.onSubmit}>
-                    <h2>Get started</h2>
+                    <h2>Sign in</h2>
                     <p className="subText">Enter your details below.</p>
-                    <div>
-                        <label>Name</label>
-                        <Input value={this.state.name} onChange={this.onChange} type="text" name="name"/>
-                    </div>
-                     {/*<div>
-                         <label>Username</label>
-                         <input value={this.state.username} onChange={this.onChange} type="text" name="username"/>
-                     </div>*/}
                     <div>
                         <label>Email</label>
                         <Input value={this.state.email} onChange={this.onChange} type="text" name="email"/>
@@ -70,12 +61,8 @@ onSubmit(e) {
                         <label>Password</label>
                         <Input value={this.state.password} onChange={this.onChange} type="password" name="password"/>
                     </div>
-                    {/*<div>
-                        <label>Password Confirmation</label>
-                        <input value={this.state.passwordConfirmation} onChange={this.onChange} type="password" name="passwordConfirmation"/>
-                    </div>*/}
                     <div className="centerAlign">
-                    <Button primary>Sign up</Button>
+                    <Button primary>Sign in</Button>
                     </div>
                 </form>
             </FormWrapper>
@@ -83,4 +70,4 @@ onSubmit(e) {
     }   
 }
 
-export default SignupForm;
+export default SigninForm;
