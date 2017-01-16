@@ -17,16 +17,16 @@ const FormWrapper = styled.div`
 
     form {
         width: 80%;
-        max-width: 500px; 
+        max-width: 500px;
 
         h2{
             margin: 0px;
             line-height:28px;
-        }
+        } 
     }
 `;
 
-class SigninForm extends React.Component {
+class SignupForm extends React.Component {
 constructor(props) {
     super(props);
     this.state = {
@@ -51,18 +51,30 @@ onSubmit(e) {
         return (
             <FormWrapper>
                 <form onSubmit={this.onSubmit}>
-                    <h2>Sign in</h2>
+                    <h2>Get started</h2>
                     <p className="subText">Enter your details below.</p>
+
                     <div>
                         <label>Email</label>
-                        <Input value={this.state.email} onChange={this.onChange} type="text" name="email"/>
+                        <Input 
+                             value={this.state.email} 
+                            onChange={this.onChange} 
+                            type="email" 
+                            name="email"
+                        />
                     </div>
                     <div>
                         <label>Password</label>
-                        <Input value={this.state.password} onChange={this.onChange} type="password" name="password"/>
+                        <Input                                       
+                            onChange={this.onChange}
+                            value={this.state.password}
+                            type="password"   
+                            name="password"
+                        />
                     </div>
+
                     <div className="centerAlign">
-                    <Button primary>Sign in</Button>
+                    <Button primary>Sign up</Button>
                     </div>
                 </form>
             </FormWrapper>
@@ -70,4 +82,4 @@ onSubmit(e) {
     }   
 }
 
-export default SigninForm;
+export default SignupForm;
