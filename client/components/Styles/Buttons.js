@@ -32,7 +32,7 @@ const Button = styled.button`
   &:active {
       background: ${(props) => props.primary ? '#006DC7' : 'white'};
       color: ${(props) => props.primary ? 'white' : '#006DC7'};
-      box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.2);
+      box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.2);
       margin: 0px 0px 2px 0px;
       
   }
