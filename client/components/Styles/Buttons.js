@@ -18,22 +18,23 @@ const Button = styled.button`
   text-transform: Uppercase;
   line-height: 40px;
   cursor:pointer;
-  box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.1);
   margin: 2px 0px 0px 0px;
   outline: none;
-  transition: margin .2s, box-shadow .2s, background .2s ease-in-out;
+  transition: opacity .2s, margin .2s, box-shadow .2s, background .2s ease-in-out;
   
   &:hover {
-      background: ${(props) => props.primary ? '#006DC7' : 'white'};
+    /{/*background: ${(props) => props.primary ? '#006DC7' : 'white'};*/}
       color: ${(props) => props.primary ? 'white' : '#006DC7'};
-      margin: 2px 0px 0px 0px;
+      opacity: 0.8;
+
   }
 
   &:active {
       background: ${(props) => props.primary ? '#006DC7' : 'white'};
       color: ${(props) => props.primary ? 'white' : '#006DC7'};
-      box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.2);
-      margin: 0px 0px 2px 0px;
+      box-shadow: 0px 10px 12px 0px rgba(0,0,0,0.1);
+      opacity: 1;
       
   }
 `;

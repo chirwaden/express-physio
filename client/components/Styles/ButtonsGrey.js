@@ -18,25 +18,23 @@ const ButtonGrey = styled.a`
   text-transform: Uppercase;
   line-height: 40px;
   cursor:pointer;
-  box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.1);
   margin: 2px 0px 0px 0px;
   outline: none;
   transition: opacity .2s, margin .2s, box-shadow .2s, background .2s ease-in-out;
   text-decoration: none;
   
   &:hover {
-      background: ${(props) => props.primary ? '#47525D' : 'white'};
+     {/*background: ${(props) => props.primary ? '#47525D' : 'white'};*/}
       color: ${(props) => props.primary ? 'white' : '#47525D'};
-      margin: 2px 0px 0px 0px;
       opacity: 0.5;
   }
 
   &:active {
       background: ${(props) => props.primary ? '#47525D' : 'white'};
       color: ${(props) => props.primary ? 'white' : '#47525D'};
-      box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.2);
-      margin: 0px 0px 2px 0px;
-      opacity: 0.5;
+      box-shadow: 0px 10px 12px 0px rgba(0,0,0,0.1);
+      opacity: 0.8;
       
   }
 `;
