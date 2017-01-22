@@ -12,7 +12,7 @@ class Navigation extends React.Component {
         <Wrapper>       
              <NavWrapper>
                 <div className="navigationBar_bar">
-                    <NavButton route="/" title="dashboard"/>
+                    <NavButton route="/Dashboard" title="dashboard"/>
                     <NavButton route="/clients" title="clients"/>
                     <NavButton route="/users" title="users"/>
                     <NavButton route="/business" title="business"/>

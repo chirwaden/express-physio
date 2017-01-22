@@ -1,22 +1,28 @@
 import React from 'react';
 import styled from 'styled-components';
+import Input from '../../Styles/InputFields';
+import Button from '../../Styles/Buttons';
 
 const FormWrapper = styled.div`
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width:500px;
+    width: 100%;
+
+    .centerAlign {
+        display: flex;
+        justify-content: center;
+    }
 
     form {
-        width: 100%;
+        width: 80%;
+        max-width: 500px;
 
         h2{
             margin: 0px;
             line-height:28px;
-        }
-        
-        
+        } 
     }
 `;
 
@@ -50,7 +56,7 @@ onSubmit(e) {
                     <p className="subText">Enter your details below.</p>
                     <div>
                         <label>Name</label>
-                        <input value={this.state.name} onChange={this.onChange} type="text" name="name"/>
+                        <Input value={this.state.name} onChange={this.onChange} type="text" name="name"/>
                     </div>
                      {/*<div>
                          <label>Username</label>
@@ -58,19 +64,18 @@ onSubmit(e) {
                      </div>*/}
                     <div>
                         <label>Email</label>
-                        <input value={this.state.email} onChange={this.onChange} type="text" name="email"/>
+                        <Input value={this.state.email} onChange={this.onChange} type="text" name="email"/>
                     </div>
                     <div>
                         <label>Password</label>
-                        <input value={this.state.password} onChange={this.onChange} type="password" name="password"/>
+                        <Input value={this.state.password} onChange={this.onChange} type="password" name="password"/>
                     </div>
                     {/*<div>
                         <label>Password Confirmation</label>
                         <input value={this.state.passwordConfirmation} onChange={this.onChange} type="password" name="passwordConfirmation"/>
                     </div>*/}
-                    <div>
-                    <button>Sign up</button>
-
+                    <div className="centerAlign">
+                    <Button primary>Sign up</Button>
                     </div>
                 </form>
             </FormWrapper>
