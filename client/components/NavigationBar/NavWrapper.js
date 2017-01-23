@@ -15,7 +15,6 @@ const NavWrapper = styled.section`
         width: 100%;
 
         > .navigationBar {
-          margin-top:20px;
         
             > a {
                 color: #FFFFFF !important;
