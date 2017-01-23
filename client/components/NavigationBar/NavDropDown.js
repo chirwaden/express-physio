@@ -78,14 +78,15 @@ const Menu = styled.div`
                     text-decoration: none;
                     text-transform: none;
                     padding: 14px 20px;
-               
                     font-weight: 500;
                     width:100%;
-                    transition: opacity .2s ease-in-out;
+                    background-color: #FFFFFF;
+                    transition: opacity .2s, background-color .2s ease-in-out;
                 }
                 a:hover  {
                     text-decoration: none;
-                    opacity: 0.5;
+                    color: #47525D !important;
+                    background-color: #F6F8FA;
                 }
             }
     }
