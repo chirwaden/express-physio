@@ -5,7 +5,29 @@ import Dropdown, { DropdownTrigger, DropdownContent } from 'react-simple-dropdow
 
 const Menu = styled.div`
 
+.account{
+    display:flex;
+    flex-direction: row;
+}
 
+    .avatarInitials {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        width: 32px;
+        height: 32px;
+        background-color: #47525D;
+        border-radius: 16px;
+        color: #FFFFFF;
+        order: 1
+    }
+    .initials {
+        display:flex;
+        flex-direction: column;
+        order: 2;
+        margin-left: 20px;
+    }
 
     a {
         color: #FFFFFF !important;
@@ -39,8 +61,10 @@ const Menu = styled.div`
         border-radius: 3px;
         margin-top: 10px;
         min-width: 288px;
-        box-shadow: 0px 10px 12px 0px rgba(0,0,0,0.1);
+        box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.1);
         top: 40px;
+        opacity: 0;
+        transition: opacity .2s ease-in-out;
 
         ul {
             padding: 0px;
@@ -58,8 +82,10 @@ const Menu = styled.div`
 
     .dropdown--active .dropdown__content {
             display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
+            justify-content: flex-start;
+            flex-direction: column;
+            opacity: 1;
+            
 
             li {
                 list-style: none;
@@ -67,6 +93,10 @@ const Menu = styled.div`
                 width:100%;
 
                 span {
+
+                }
+                
+                .avatarEmail {
                     color:#95989A;
                     font-size:12px;
                     width:100%;
@@ -112,8 +142,12 @@ var AccountDropdown = React.createClass({
                         </div>*/}
                         <ul className="account-dropdown__quick-links account-dropdown__segment">
                             <li className="account">
-                                    Jane Appleseed<br />
-                                    <span>jane.appleseed@topphysio.com</span>
+
+                                    <div className="avatarInitials">JA</div>
+                                    <div className="initials">
+                                        <span>Jane Appleseed</span>
+                                        <span className="avatarEmail">jane.appleseed@topphysio.com</span>
+                                    </div>
                             
                             </li>
                         </ul>
