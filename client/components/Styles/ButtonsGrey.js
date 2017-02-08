@@ -25,16 +25,21 @@ const ButtonGrey = styled.a`
   text-decoration: none;
   
   &:hover {
-     {/*background: ${(props) => props.primary ? '#47525D' : 'white'};*/}
-      color: ${(props) => props.primary ? 'white' : '#47525D'};
-      opacity: 0.5;
-  }
-
-  &:active {
       background: ${(props) => props.primary ? '#47525D' : 'white'};
       color: ${(props) => props.primary ? 'white' : '#47525D'};
       box-shadow: 0px 10px 12px 0px rgba(0,0,0,0.1);
-      opacity: 0.8;
+      opacity: 0.8;     
+  }
+
+  &:active {
+
+      {/*background: ${(props) => props.primary ? '#47525D' : 'white'};*/}
+      color: ${(props) => props.primary ? 'white' : '#47525D'};
+      box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.1);
+      opacity: 0.5;
+
+
+
       
   }
 `;

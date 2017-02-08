@@ -24,17 +24,17 @@ const Button = styled.button`
   transition: opacity .2s, margin .2s, box-shadow .2s, background .2s ease-in-out;
   
   &:hover {
-    /{/*background: ${(props) => props.primary ? '#006DC7' : 'white'};*/}
-      color: ${(props) => props.primary ? 'white' : '#006DC7'};
-      opacity: 0.8;
-
-  }
-
-  &:active {
       background: ${(props) => props.primary ? '#006DC7' : 'white'};
       color: ${(props) => props.primary ? 'white' : '#006DC7'};
       box-shadow: 0px 10px 12px 0px rgba(0,0,0,0.1);
       opacity: 1;
+
+  }
+
+  &:active {
+      color: ${(props) => props.primary ? 'white' : '#006DC7'};
+      box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.1);
+      opacity: 0.8;
       
   }
 `;
