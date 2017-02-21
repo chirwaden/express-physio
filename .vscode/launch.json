@@ -5,18 +5,19 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "node2",
+            "name": "Launch Alt",
+            "type": "node",
             "request": "launch",
-            "name": "Launch Program",
-            // "program": "${workspaceRoot}\\server\\index.js",
+            "program": "${workspaceRoot}/server/index.js",
+            "stopOnEntry": false,
+            "args": [],
             "cwd": "${workspaceRoot}",
-            "runtimeExecutable": "npm",
-            "windows": {
-                "runtimeExecutable": "npm.cmd"
-            },
+            "preLaunchTask": null,
+            "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/babel-node.cmd",
             "runtimeArgs": [
-                "run-script", "serve"
-            ]
+                // "--nolazy"
+            ],
+            "sourceMaps": false
         },
         {
             "type": "node",

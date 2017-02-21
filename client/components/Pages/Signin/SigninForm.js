@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Auth from '../../../services/AuthService'
 import Input from '../../Styles/InputFields';
 import Button from '../../Styles/Buttons';
 
@@ -38,6 +39,16 @@ constructor(props) {
     this.onSubmit = this.onSubmit.bind(this);
 }
 
+login(e) {
+    e.preventDefault();
+    Auth.login(this.state.user, this.state.password)
+    .catch(function(err) {
+        alert("There's an error logging in");
+        console.log("Error logging in", err);
+    });
+}
+
+
 onChange(e) {
     this.setState({ [e.target.name]: e.target.value});
 }
@@ -74,7 +85,7 @@ onSubmit(e) {
                     </div>
 
                     <div className="centerAlign">
-                    <Button primary>Sign up</Button>
+                    <Button primary onClick={this.login.bind(this)}>Sign up</Button>
                     </div>
                 </form>
             </FormWrapper>

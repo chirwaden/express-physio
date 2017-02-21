@@ -4,10 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --watch server --exec babel-node -- server/index.js",
-    "build": "babel-node -- server/index.js",
-    "serve": "node server/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon --watch server --exec babel-node -- server/index.js"
   },
   "keywords": [],
   "author": "",
@@ -31,6 +28,7 @@
     "axios": "^0.15.3",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
+    "express-stormpath": "^3.2.0",
     "lodash": "^4.17.4",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
