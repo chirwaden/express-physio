@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import styled from 'styled-components';
-import Auth from '../../../services/AuthService'
 import Input from '../../Styles/InputFields';
 import Button from '../../Styles/Buttons';
+import {bindActionCreators} from 'redux';  
+import {connect} from 'react-redux'; 
 
 const FormWrapper = styled.div`
     flex: 1;
@@ -55,6 +56,7 @@ onChange(e) {
 
 onSubmit(e) {
     e.preventDefault();
+    this.props.actions.loginUser(this.state.credentials);
     console.log(this.state);
 }
 

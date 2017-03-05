@@ -4,8 +4,8 @@ import App from './components/Pages/App';
 import { Router, browserHistory } from 'react-router';
 import ReactDOM from 'react-dom';
 import thunkMiddleware from 'redux-thunk'
-import RouterContainer from './services/routerContainer';
-import LoginActions from './actions/loginActions';
+//import api from './middleware/api'
+
 
 import routes from './routes';
 // require('./css/style.sass');

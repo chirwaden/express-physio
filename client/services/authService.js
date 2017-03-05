@@ -1,7 +1,7 @@
 import request from 'request';
 import when from 'when';
-import {LOGIN_URL, SIGNUP_URL} from '../constants/LoginConstants';
-import LoginActions from '../actions/LoginActions';
+import {LOGIN_URL, SIGNUP_URL} from '../constants/loginConstants';
+import LoginActions from '../actions/loginActions';
 
 class AuthService {
 
