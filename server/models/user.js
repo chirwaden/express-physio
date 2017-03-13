@@ -1,50 +1,61 @@
 import mongoose from 'mongoose'; 
-import loadClass from 'mongoose-class-wrapper'; 
 import bcrypt from 'bcrypt-nodejs';
- 
-var userSchema = new mongoose.Schema({
-  username: {type: String, unique: true, required: true},
-  email: {type: String, unique: true, required: true},
-  hashedPassword: {type: String, required: true},
-  salt: {type: String, required: true},
-  created: {type: Date, default: Date.now}
-});
- 
-class UserModel {
- 
-  get password() {
-    return this._plainPassword;
-  }
 
-  set password(password) {
-    this._plainPassword = password;
-    this.salt = Math.random() + '';
-    this.hashedPassword = this.encryptPassword(password);
-  }
- 
-  encryptPassword(password) {
-      const user = this,
+const Schema = mongoose.Schema;
+
+//================================
+// User Schema
+//================================
+const UserSchema = new Schema({  
+  email: {
+    type: String,
+    lowercase: true,
+    unique: true,
+    required: true
+  },
+  password: {
+    type: String,
+    required: true
+  },
+  profile: {
+    firstName: { type: String },
+    lastName: { type: String }
+  },
+  role: {
+    type: String,
+    enum: ['Member', 'Physio', 'Admin'],
+    default: 'Physio'
+  },
+  resetPasswordToken: { type: String },
+  resetPasswordExpires: { type: Date }
+},
+{
+  timestamps: true
+});
+
+UserSchema.pre('save', function(next) {  
+  const user = this,
         SALT_FACTOR = 5;
 
-        if (!user.isModified('password')) return next();
+  if (!user.isModified('password')) return next();
 
-        bcrypt.genSalt(SALT_FACTOR, function(err, salt) {
-            if (err) return next(err);
+  bcrypt.genSalt(SALT_FACTOR, function(err, salt) {
+    if (err) return next(err);
 
-            bcrypt.hash(password, salt, null, function(err, hash) {
-            if (err) return next(err);
-                password = hash;
-            next();
-            });
-        });
-  }
- 
-  static byEmail(email) {
-    return this.findOne({email}).exec();
-  }
- 
+    bcrypt.hash(user.password, salt, null, function(err, hash) {
+      if (err) return next(err);
+      user.password = hash;
+      next();
+    });
+  });
+});
+
+UserSchema.methods.comparePassword = function(candidatePassword, cb) {  
+  bcrypt.compare(candidatePassword, this.password, function(err, isMatch) {
+    if (err) { return cb(err); }
+
+    cb(null, isMatch);
+  });
 }
 
-userSchema.plugin(loadClass, UserModel);
- 
-export default mongoose.model('User', userSchema);
+module.exports = mongoose.model('User', UserSchema);  

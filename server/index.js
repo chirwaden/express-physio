@@ -6,17 +6,8 @@ import webpackHotMiddleware from 'webpack-hot-middleware';
 import webpackConfig from '../webpack.config.dev';
 import bodyParser from 'body-parser';
 import mongoose from  'mongoose';
-import config from './config/db';
-import bcrypt from 'bcrypt-nodejs';
-import passport from 'passport'; 
-import LocalStrategy from 'passport-local';
-      
-
-const JwtStrategy = require('passport-jwt').Strategy;
-const ExtractJwt = require('passport-jwt').ExtractJwt;
-
-//Classes
-import User from './models/user';
+import config from './config/conf';
+import router from './router'; 
 
 let app = express();
 
@@ -33,6 +24,7 @@ app.use(webpackHotMiddleware(compiler));
 app.use(bodyParser.urlencoded({ extended: false }));  
 app.use(bodyParser.json());
 
+mongoose.Promise = require('bluebird');
 mongoose.connect(config.database);
 
 app.get('/*',(req, res) => {
@@ -40,3 +32,5 @@ app.get('/*',(req, res) => {
 });
 
 app.listen(3000, () => console.log('Running on localhost:3000'));
+
+router(app);

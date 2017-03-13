@@ -9,14 +9,16 @@ import SignupPage from './components/Pages/Signup/SignupPage';
 import ClientsPage from './components/Pages/Clients/ClientsPage';
 import UsersPage from './components/Pages/Users/UsersPage';
 import BusinessPage from './components/Pages/Business/BusinessPage';
+import NotFoundPage from './components/Pages/NotFound/Index';
+import RequireAuth from './components/Auth/require-auth';
 
 export default (
     <Route path="/" component={App}>
         <IndexRoute component={HomePage} />
-        <Route path="dashboard" component={Dashboard} />
-        <Route path="clients" component={ClientsPage} />
-        <Route path="users" component={UsersPage} />
-        <Route path="business" component={BusinessPage} />
+        <Route path="dashboard" component={RequireAuth(Dashboard)} />
+        <Route path="clients" component={RequireAuth(ClientsPage)} />
+        <Route path="users" component={RequireAuth(UsersPage)} />
+        <Route path="business" component={RequireAuth(BusinessPage)} />
         <Route path="signin" component={SigninPage} />
         <Route path="signup" component={SignupPage} />
     </Route>
