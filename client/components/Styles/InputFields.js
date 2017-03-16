@@ -8,7 +8,7 @@ const Input = styled.input`
     color: #47525D;
     font-size: 16px;
     font-weight: 300;
-    padding: 14px;
+    padding: 15px;
     border-radius: 3px;
     width: 100%;
     margin: 7px 0px 30px 0px;
@@ -17,6 +17,7 @@ const Input = styled.input`
     &:focus{
         outline: 2px solid #4BBC73;
         border: 1px solid #4BBC73;
+        border-radius: 3px;
     }
 
 `;
