@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch Alt",
+            "name": "Launch Win",
             "type": "node",
             "request": "launch",
             "program": "${workspaceRoot}/server/index.js",
@@ -14,6 +14,21 @@
             "cwd": "${workspaceRoot}",
             "preLaunchTask": null,
             "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/babel-node.cmd",
+            "runtimeArgs": [
+                // "--nolazy"
+            ],
+            "sourceMaps": false
+        },
+        {
+            "name": "Launch Mac",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/server/index.js",
+            "stopOnEntry": false,
+            "args": [],
+            "cwd": "${workspaceRoot}",
+            "preLaunchTask": null,
+            "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/babel-node",
             "runtimeArgs": [
                 // "--nolazy"
             ],
