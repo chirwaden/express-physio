@@ -11,12 +11,12 @@ const Input = styled.input`
     padding: 15px;
     border-radius: 3px;
     width: 100%;
-    margin: 7px 0px 30px 0px;
+    margin: 7px 0px 32px 0px;
     outline:none;
 
     &:focus{
         outline:none;
-        border: 2px solid #4BBC73;
+        border: 2px solid #007EE5;
         border-radius: 3px;
         padding: 14px;
     }

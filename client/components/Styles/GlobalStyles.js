@@ -34,9 +34,10 @@ injectGlobal`
         font-weight: 300;
     }
     label {
-        font-size:12px;
+        font-size:14px;
         font-weight: 400;
         text-transform: Uppercase;
+        height: 16px;
     }
 `
 
