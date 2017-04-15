@@ -11,6 +11,13 @@ const form = reduxForm({
   form: 'login'
 });
 
+const renderField = field => (  
+    <div>
+      <Input className="form-control" {...field.input}/>
+      {field.touched && field.error && <div className="error">{field.error}</div>}
+    </div>
+);
+
 const FormWrapper = styled.div`
     flex: 1;
     display: flex;
@@ -50,7 +57,7 @@ class SigninForm extends React.Component {
     }
 
     render() {
-        const { handleSubmtit } = this.props;
+        const { handleSubmit } = this.props;
         return (
             <FormWrapper>
                 <form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
