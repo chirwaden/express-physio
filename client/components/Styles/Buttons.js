@@ -26,24 +26,19 @@ const Button = styled.button`
   &:hover {
     /{/*background: ${(props) => props.primary ? '#006DC7' : 'white'};*/}
       color: ${(props) => props.primary ? 'white' : '#006DC7'};
-      background-color: #0562A2;
-
+      background-color: #0065CC;
   }
 
   &:active {
       background: ${(props) => props.primary ? '#007EE5' : 'white'};
       color: ${(props) => props.primary ? 'white' : '#0562A2'};
       box-shadow: 0px 4px 8px 0px rgba(24, 29, 38, 0.3)   ;
-      opacity: 1;
-      
   }
 
     &:focus {
       background: ${(props) => props.primary ? '#007EE5' : 'white'};
       color: ${(props) => props.primary ? 'white' : '#0562A2'};
       box-shadow: 0px 4px 8px 0px rgba(24, 29, 38, 0.3);
-      opacity: 1;
-      
   }
 `;
 
