@@ -20,3 +20,5 @@ export const media = Object.keys(sizes).reduce((accumulator, label) => {
   `
   return accumulator
 }, {})
+
+// More info on breakpoints go here: https://github.com/styled-components/styled-components/blob/master/docs/tips-and-tricks.md
