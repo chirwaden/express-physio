@@ -5,6 +5,7 @@ injectGlobal`
     @font-face {
       font-family: 'Open Sans', sans-serif;
       src: url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,800');
+      src: url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
     }
     *, *:before, *:after{
         box-sizing: inherit;
@@ -32,12 +33,6 @@ injectGlobal`
         line-height: 0px;
         margin-bottom: 40px;
         font-weight: 300;
-    }
-    label {
-        font-size:14px;
-        font-weight: 400;
-        text-transform: Uppercase;
-        height: 16px;
     }
 `
 

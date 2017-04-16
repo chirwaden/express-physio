@@ -26,7 +26,7 @@ const ButtonGrey = styled.a`
   
   &:hover {
      {/*background: ${(props) => props.primary ? '#47525D' : 'white'};*/}
-      color: ${(props) => props.primary ? 'white' : '#47525D'};
+      color: ${(props) => props.primary ? 'white' : '#007EE5'};
       opacity: 0.5;
   }
 

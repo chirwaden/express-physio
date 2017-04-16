@@ -26,22 +26,22 @@ const Button = styled.button`
   &:hover {
     /{/*background: ${(props) => props.primary ? '#006DC7' : 'white'};*/}
       color: ${(props) => props.primary ? 'white' : '#006DC7'};
-      opacity: 0.8;
+      background-color: #0562A2;
 
   }
 
   &:active {
-      background: ${(props) => props.primary ? '#006DC7' : 'white'};
-      color: ${(props) => props.primary ? 'white' : '#006DC7'};
-      box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.3);
+      background: ${(props) => props.primary ? '#007EE5' : 'white'};
+      color: ${(props) => props.primary ? 'white' : '#0562A2'};
+      box-shadow: 0px 4px 8px 0px rgba(24, 29, 38, 0.3)   ;
       opacity: 1;
       
   }
 
     &:focus {
-      background: ${(props) => props.primary ? '#006DC7' : 'white'};
-      color: ${(props) => props.primary ? 'white' : '#006DC7'};
-      box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.3);
+      background: ${(props) => props.primary ? '#007EE5' : 'white'};
+      color: ${(props) => props.primary ? 'white' : '#0562A2'};
+      box-shadow: 0px 4px 8px 0px rgba(24, 29, 38, 0.3);
       opacity: 1;
       
   }
