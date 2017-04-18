@@ -2,6 +2,7 @@ import React from 'react';
 import SignupForm from './SignupForm';
 import TopMenu from './TopMenu';
 import styled from 'styled-components';
+import { media } from '../../Styles/BreakPoints';
 
 const Wrapper = styled.div`
 

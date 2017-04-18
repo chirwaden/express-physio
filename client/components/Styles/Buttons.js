@@ -9,11 +9,11 @@ const Button = styled.button`
 
   font-size: 1em;
   font-weight: 300;
-  padding: 0px 2em;
+  padding: 0px 1em;
   border: 1px solid #007EE5;
   border-radius: 3px;
   min-width: 130px;
-  max-height: 48px;
+  max-height: 40px;
   text-align: center;
   /*text-transform: Uppercase;*/
   line-height: 40px;

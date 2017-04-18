@@ -84,7 +84,7 @@ class SigninForm extends React.Component {
                     </div>
 
                     <div className="centerAlign">
-                    <Button primary type="submit">Login</Button>
+                    <Button primary type="submit">Log In</Button>
                     </div>
                 </form>
             </FormWrapper>
