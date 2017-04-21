@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Wrapper from './Wrapper';
 import NavWrapper from './NavWrapper';
 import NavButton from './NavButton';
+import AccountDropdown from './NavDropDown';
 
 
 class Navigation extends React.Component {
@@ -21,7 +22,8 @@ class Navigation extends React.Component {
 
                 <div className="navigationBar_bar username">
                     <div className="navigationBar ">
-                        <a onClick={() => alert('click')} href="#">Jane Appleseed</a>
+                        <AccountDropdown />
+                        {/*<a onClick={() => alert('click')} href="#">Jane Appleseed</a>*/}
                     </div>
                 </div>
             </NavWrapper>

@@ -35,8 +35,7 @@ const ButtonGrey = styled.a`
       background: ${(props) => props.primary ? '#007EE5' : 'white'};
       color: ${(props) => props.primary ? 'white' : '#007EE5'};
       box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.3);
-      opacity: 0.8;
-      
+      opacity: 0.8;      
   }
 `;
 

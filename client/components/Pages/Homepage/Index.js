@@ -11,7 +11,7 @@ class HomePage extends React.Component {
                 <div className="PageLocation">
                     <div className="PageLocationWrapper">
                         
-                        <h1>Homepage</h1>
+                        <h1>Homepage Hero Banner</h1>
                     </div>
                 </div>
                 <div className="PageWrapper">

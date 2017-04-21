@@ -24,7 +24,7 @@ const Button = styled.button`
   transition: opacity .2s, margin .2s, box-shadow .2s, background .2s ease-in-out;
   
   &:hover {
-    /{/*background: ${(props) => props.primary ? '#006DC7' : 'white'};*/}
+      background: ${(props) => props.primary ? '#006DC7' : 'white'};
       color: ${(props) => props.primary ? 'white' : '#006DC7'};
       background-color: #0065CC;
   }
