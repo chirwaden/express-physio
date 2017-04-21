@@ -5,6 +5,7 @@ injectGlobal`
     @font-face {
       font-family: 'Open Sans', sans-serif;
       src: url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,800');
+      src: url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
     }
     *, *:before, *:after{
         box-sizing: inherit;
@@ -12,7 +13,7 @@ injectGlobal`
     html{
         box-sizing: border-box;
         height:100vh;
-        font-size:14px;
+        font-size:16px;
     }
     body{
         margin: 0;
@@ -33,11 +34,27 @@ injectGlobal`
         margin-bottom: 40px;
         font-weight: 300;
     }
-    label {
-        font-size:12px;
-        font-weight: 400;
-        text-transform: Uppercase;
-    }
+
+
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
+
+
+
+
 `
 
 const Wrapper = styled.div`
