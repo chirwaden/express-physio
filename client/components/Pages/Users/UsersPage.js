@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Main from '../PagesWrapper';
 import NavigationBar from '../../NavigationBar/NavigationBar';
 import Table from '../../Styles/Tables';
-import Checkbox from '../../Styles/Checkbox';
 
 class UsersPage extends React.Component {
     render() {
