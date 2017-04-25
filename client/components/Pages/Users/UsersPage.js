@@ -22,9 +22,6 @@ class UsersPage extends Component {
                     </div>
                 </div>
                 <div className="PageWrapper">
-<<<<<<< HEAD
-                <p>{this.props.listUsers().list}</p>
-=======
                 <p>Some Content Here</p>
 
                 <Table>
@@ -60,8 +57,6 @@ class UsersPage extends Component {
                         </tr>
                     </tbody>
                 </Table>
-        
->>>>>>> 52402e3897df0eb446d17e150a8d13381881a006
                 </div>
             </Main>
         
