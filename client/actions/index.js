@@ -1,7 +1,7 @@
 import axios from 'axios';  
 import { browserHistory } from 'react-router';  
 import cookie from 'react-cookie';  
-import { AUTH_USER,  AUTH_ERROR, UNAUTH_USER, PROTECTED_TEST } from './types';
+import { AUTH_USER,  AUTH_ERROR, UNAUTH_USER, PROTECTED_TEST, LIST_USERS, ERROR_RESPONSE } from './types';
 
 const API_URL = 'http://localhost:3000/api';
 const CLIENT_ROOT_URL = 'http://localhost:3000';
@@ -29,6 +29,24 @@ export function errorHandler(dispatch, error, type) {
       payload: errorMessage
     });
   }
+}
+
+export function listUsers() {
+  const url = '/users/list';
+  return dispatch => getData(LIST_USERS, ERROR_RESPONSE, true, url, dispatch);
+
+  // return function (dispatch) {
+  //   axios.get(`${API_URL}/users/list`, {
+  //     headers: { Authorization: cookie.load('token') },
+  //   })
+  //   .then((response) => {
+  //     console.log(response);
+  //     dispatch({
+  //       type: LIST_USERS
+  //     });
+  //   })
+  //   .catch(response => dispatch(errorHandler(response.data.error)));
+  // };
 }
 
 export function loginUser({ email, password }) {  
@@ -83,4 +101,86 @@ export function protectedTest() {
       errorHandler(dispatch, error.response, AUTH_ERROR)
     });
   }
+}
+// Post Request
+export function postData(action, errorType, isAuthReq, url, dispatch, data) {
+  const requestUrl = API_URL + url;
+  let headers = {};
+
+  if (isAuthReq) {
+    headers = { headers: { Authorization: cookie.load('token') } };
+  }
+
+  axios.post(requestUrl, data, headers)
+  .then((response) => {
+    dispatch({
+      type: action,
+      payload: response.data,
+    });
+  })
+  .catch((error) => {
+    errorHandler(dispatch, error.response, errorType);
+  });
+}
+
+export function getData(action, errorType, isAuthReq, url, dispatch) {
+  const requestUrl = API_URL + url;
+  let headers = {};
+
+  if (isAuthReq) {
+    headers = { headers: { Authorization: cookie.load('token') } };
+  }
+
+  axios.get(requestUrl, headers)
+  .then((response) => {
+    dispatch({
+      type: action,
+      payload: response.data,
+    });
+  })
+  .catch((error) => {
+    errorHandler(dispatch, error.response, errorType);
+  });
+}
+
+// Put Request
+export function putData(action, errorType, isAuthReq, url, dispatch, data) {
+  const requestUrl = API_URL + url;
+  let headers = {};
+
+  if (isAuthReq) {
+    headers = { headers: { Authorization: cookie.load('token') } };
+  }
+
+  axios.put(requestUrl, data, headers)
+  .then((response) => {
+    dispatch({
+      type: action,
+      payload: response.data,
+    });
+  })
+  .catch((error) => {
+    errorHandler(dispatch, error.response, errorType);
+  });
+}
+
+// Delete Request
+export function deleteData(action, errorType, isAuthReq, url, dispatch) {
+  const requestUrl = API_URL + url;
+  let headers = {};
+
+  if (isAuthReq) {
+    headers = { headers: { Authorization: cookie.load('token') } };
+  }
+
+  axios.delete(requestUrl, headers)
+  .then((response) => {
+    dispatch({
+      type: action,
+      payload: response.data,
+    });
+  })
+  .catch((error) => {
+    errorHandler(dispatch, error.response, errorType);
+  });
 }

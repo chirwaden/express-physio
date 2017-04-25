@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { listUsers } from '../../../actions/index';
 import styled from 'styled-components';
 import Main from '../PagesWrapper';
 import NavigationBar from '../../NavigationBar/NavigationBar';
 
-class UsersPage extends React.Component {
+class UsersPage extends Component {
+    componentWillMount(){
+        this.props.listUsers();
+    }
+
     render() {
         return (
             
@@ -15,7 +21,7 @@ class UsersPage extends React.Component {
                     </div>
                 </div>
                 <div className="PageWrapper">
-                <p>Some Content Here</p>
+                <p>{this.props.listUsers().list}</p>
                 </div>
             </Main>
         
@@ -23,4 +29,11 @@ class UsersPage extends React.Component {
     }   
 }
 
-export default UsersPage;
+function mapStateToProps(state){
+    return{
+        errorMessage: state.error,
+        list: state.user.profile
+    }
+}
+
+export default connect(mapStateToProps, { listUsers })(UsersPage);
