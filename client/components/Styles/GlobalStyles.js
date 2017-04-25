@@ -36,6 +36,29 @@ injectGlobal`
     }
 
 
+   
+
+input[type=checkbox] + .label-text:before{
+        content:url("checkbox_on.svg");
+        cursor:pointer;
+        width: 24px;
+        height: 24px;
+    }
+
+input[type=checkbox]:checked + .label-text:before{
+        content:url("checkbox_on.svg");
+        cursor:pointer;
+        width: 24px;
+        height: 24px;
+    }
+
+
+
+
+
+
+
+
 @mixin for-phone-only {
   @media (max-width: 599px) { @content; }
 }

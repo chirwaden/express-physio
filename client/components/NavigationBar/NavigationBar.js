@@ -17,7 +17,6 @@ class Navigation extends React.Component {
                     <NavButton route="/clients" title="clients"/>
                     <NavButton route="/users" title="users"/>
                     <NavButton route="/business" title="business"/>
-                    <NavButton route="/signup" title="signup"/>
                 </div>
 
                 <div className="navigationBar_bar username">

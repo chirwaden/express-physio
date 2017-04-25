@@ -40,11 +40,13 @@ const Menu = styled.div`
     }
     a:hover  {
         text-decoration: none;
-        opacity: 0.5;
+        color:#47525D;
     }
     .active {
         text-decoration: none;
         opacity: 0.5;
+        color:#47525D;
+
     }
 
     .dropdown {
@@ -116,7 +118,8 @@ const Menu = styled.div`
                 a:hover  {
                     text-decoration: none;
                     color: #47525D !important;
-                    background-color: #F6F8FA;
+                    background-color: #eaeaea;
+                    /*background-color: #F6F8FA;*/
                 }
             }
     }
