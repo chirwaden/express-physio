@@ -37,6 +37,7 @@ injectGlobal`
     }
 
 
+<<<<<<< HEAD
    
 
 /*input[type=checkbox] + .label-text:before{
@@ -63,6 +64,8 @@ input[type=checkbox]:checked + .label-text:before{
 
 
 
+=======
+>>>>>>> 2b78ba0da48c1880b9d1b3a3fb0019732dbd810e
 @mixin for-phone-only {
   @media (max-width: 599px) { @content; }
 }

@@ -38,6 +38,14 @@ export default {
                 loaders: ['react-hot','babel?presets[]=stage-0']
             },
             {
+<<<<<<< HEAD
+=======
+                test: /\.jsx$/,
+                include: path.join(__dirname, 'client'),
+                loaders: ['react-hot','babel?presets[]=stage-0']
+            },
+            {
+>>>>>>> 2b78ba0da48c1880b9d1b3a3fb0019732dbd810e
                 test: /\.js$/,
                 include: path.join(__dirname, 'client'),
                 loaders: ['react-hot','babel?presets[]=stage-0']

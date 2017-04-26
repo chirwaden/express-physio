@@ -32,6 +32,7 @@ app.get('/*',(req, res) => {
     res.sendFile(path.join(__dirname, './index.html'));
 });
 
+<<<<<<< HEAD
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', 'http://localhost:8080');
   res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
@@ -46,3 +47,8 @@ console.log(`Running on localhost:${config.port}`);
 router(app);
 
 module.exports = server;
+=======
+app.listen(3000, () => console.log('Running on localhost:3000'));
+
+router(app);
+>>>>>>> 2b78ba0da48c1880b9d1b3a3fb0019732dbd810e
