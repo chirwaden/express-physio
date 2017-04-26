@@ -3,7 +3,6 @@ import webpack from 'webpack';
 
 export default {
     devtools: 'eval-source-map',
-
     entry: [
         'webpack-hot-middleware/client',
         path.join(__dirname, './client/index.js'),
@@ -24,24 +23,37 @@ export default {
 
     module: {
         loaders: [
+
             {
-            test: /\.js$/,
-            include: path.join(__dirname, 'client'),
-            loaders: ['react-hot','babel']
+                test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                loader: 'file-loader'
+            },
+            {
+                test: /\.(png|jpg)$/, 
+                loader: 'url-loader?limit=8192'
+            },
+            {
+                test: /\.jsx$/,
+                include: path.join(__dirname, 'client'),
+                loaders: ['react-hot','babel?presets[]=stage-0']
+            },
+            {
+                test: /\.js$/,
+                include: path.join(__dirname, 'client'),
+                loaders: ['react-hot','babel?presets[]=stage-0']
             },
             {         
-            test: /\.css$/,
-            loader: 'style!css'
+                test: /\.css$/,
+                loader: 'style!css'
             },
             {         
-            test: /\.sass$/,
-            loader: 'style!css!sass'
+                test: /\.sass$/,
+                loader: 'style!css!sass'
             }
         ]
     },
 
     resolve: {
-        extentions: ['','.js','.css']
-        
+        extentions: ['','.js','.jsx','.css']
     }
 }

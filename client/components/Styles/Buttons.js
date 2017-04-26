@@ -9,16 +9,16 @@ const Button = styled.button`
 
   font-size: 1em;
   font-weight: 300;
-  padding: 0px 2em;
+  padding: 0px 1em;
   border: 1px solid #007EE5;
-  border-radius: 40px;
-  min-width: 138px;
+  border-radius: 3px;
+  min-width: 130px;
   max-height: 40px;
   text-align: center;
-  text-transform: Uppercase;
+  /*text-transform: Uppercase;*/
   line-height: 40px;
   cursor:pointer;
-  box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.1);
+  box-shadow: none;
   margin: 2px 0px 0px 0px;
   outline: none;
   transition: opacity .2s, margin .2s, box-shadow .2s, background .2s ease-in-out;
@@ -26,16 +26,19 @@ const Button = styled.button`
   &:hover {
       background: ${(props) => props.primary ? '#006DC7' : 'white'};
       color: ${(props) => props.primary ? 'white' : '#006DC7'};
-      box-shadow: 0px 10px 12px 0px rgba(0,0,0,0.1);
-      opacity: 1;
-
+      background-color: #0065CC;
   }
 
   &:active {
-      color: ${(props) => props.primary ? 'white' : '#006DC7'};
-      box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.1);
-      opacity: 0.8;
-      
+      background: ${(props) => props.primary ? '#007EE5' : 'white'};
+      color: ${(props) => props.primary ? 'white' : '#0562A2'};
+      box-shadow: 0px 4px 8px 0px rgba(24, 29, 38, 0.3)   ;
+  }
+
+    &:focus {
+      background: ${(props) => props.primary ? '#007EE5' : 'white'};
+      color: ${(props) => props.primary ? 'white' : '#0562A2'};
+      box-shadow: 0px 4px 8px 0px rgba(24, 29, 38, 0.3);
   }
 `;
 
