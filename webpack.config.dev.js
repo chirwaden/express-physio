@@ -40,11 +40,16 @@ export default {
             {         
                 test: /\.sass$/,
                 loader: 'style!css!sass'
+            },
+            {
+                test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2|json|xml|ico)$/,
+                include: path.join(__dirname, 'client'),
+                loader: 'file-loader'
             }
         ]
     },
 
     resolve: {
-        extentions: ['','.js','.jsx','.css']
+        extentions: ['','.js','.jsx','.css','.svg']
     }
 }

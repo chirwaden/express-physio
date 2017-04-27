@@ -25,24 +25,17 @@ app.use(webpackHotMiddleware(compiler));
 app.use(bodyParser.urlencoded({ extended: false }));  
 app.use(bodyParser.json());
 
+router(app);
+
 mongoose.Promise = require('bluebird');
 mongoose.connect(config.database);
 
-app.get('/*',(req, res) => {
+app.get('*',(req, res) => {
     res.sendFile(path.join(__dirname, './index.html'));
-});
-
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'http://localhost:8080');
-  res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization, Access-Control-Allow-Credentials');
-  res.header('Access-Control-Allow-Credentials', 'true');
-  next();
 });
 
 server = app.listen(config.port);
 console.log(`Running on localhost:${config.port}`);
 
-router(app);
 
 module.exports = server;
