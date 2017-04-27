@@ -38,7 +38,7 @@ class UsersPage extends Component {
                             <th>Organisation</th>
                             <th>State</th>
                             <th>Last Active</th>
-                            <th>Actions</th>
+                           
                         </tr>
                     </thead>
                     <tbody>
@@ -46,14 +46,16 @@ class UsersPage extends Component {
                             <td>     
                                 <Checkbox />
                             </td>
-                            <td><span className="avatarInitials">YA</span></td>
+                            <td>
+                                <span className="avatarInitials">YA</span>
+                            </td>
                             <td>Yvonne Archer</td>
                             <td>YVonA@htomal.com</td>
                             <td>Standard</td>
                             <td>The Smart Physio</td>
                             <td>Active</td>
-                            <td>9 months ago</td>
-                            <td>Menu</td>
+                            <td className="right">9 months ago</td>
+                      
                         </tr>
                                                <tr>
                             <td>     
@@ -66,7 +68,7 @@ class UsersPage extends Component {
                             <td>The Smart Physio</td>
                             <td>Active</td>
                             <td>9 months ago</td>
-                            <td>Menu</td>
+                         
                         </tr>
                                                <tr>
                             <td>     
@@ -79,7 +81,7 @@ class UsersPage extends Component {
                             <td>The Smart Physio</td>
                             <td>Active</td>
                             <td>9 months ago</td>
-                            <td>Menu</td>
+                          
                         </tr>
                                                <tr>
                             <td>     
@@ -92,7 +94,7 @@ class UsersPage extends Component {
                             <td>The Smart Physio</td>
                             <td>Active</td>
                             <td>9 months ago</td>
-                            <td>Menu</td>
+                   
                         </tr>
                                                <tr>
                             <td>     
@@ -105,7 +107,7 @@ class UsersPage extends Component {
                             <td>The Smart Physio</td>
                             <td>Active</td>
                             <td>9 months ago</td>
-                            <td>Menu</td>
+                       
                         </tr>
                                                <tr>
                             <td>     
@@ -118,7 +120,7 @@ class UsersPage extends Component {
                             <td>The Smart Physio</td>
                             <td>Active</td>
                             <td>9 months ago</td>
-                            <td>Menu</td>
+                 
                         </tr>
                                                <tr>
                             <td>     
@@ -131,9 +133,8 @@ class UsersPage extends Component {
                             <td>The Smart Physio</td>
                             <td>Active</td>
                             <td>9 months ago</td>
-                            <td>Menu</td>
+                        
                         </tr>
-
                     </tbody>
                 </Table>
                 </div>

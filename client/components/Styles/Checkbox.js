@@ -32,12 +32,12 @@ const Label = styled.label`
         color: #007EE5;
         border: solid 1px #007EE5;
         border-radius: 3px;
-        padding: 2px 2px;
+        padding: 1px 1px;
         background-clip: content-box; /* support: IE9+ */
         background-color: #007EE5;
         cursor:pointer;
         font-size: 12px;
-        letter-spacing: -0.7px;
+        letter-spacing: -0.4px;
         margin-bottom:8px;
         
     }
