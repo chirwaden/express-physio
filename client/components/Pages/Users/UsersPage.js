@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import Main from '../PagesWrapper';
 import NavigationBar from '../../NavigationBar/NavigationBar';
 import Table from '../../Styles/Tables';
+import Checkbox from '../../Styles/Checkbox';
 
 class UsersPage extends Component {
     componentWillMount(){
@@ -28,10 +29,7 @@ class UsersPage extends Component {
                     <thead>
                         <tr>
                             <th>
-                                <label>
-                                    <input type="checkbox"></input>
-                                    <span className="label-text"></span>
-                                </label>
+                                <Checkbox />
                             </th>
                             <th></th>
                             <th>Name</th>
@@ -40,12 +38,29 @@ class UsersPage extends Component {
                             <th>Organisation</th>
                             <th>State</th>
                             <th>Last Active</th>
-                            <th>Actions</th>
+                           
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><input type="checkbox"/></td>
+                            <td>     
+                                <Checkbox />
+                            </td>
+                            <td>
+                                <span className="avatarInitials">YA</span>
+                            </td>
+                            <td>Yvonne Archer</td>
+                            <td>YVonA@htomal.com</td>
+                            <td>Standard</td>
+                            <td>The Smart Physio</td>
+                            <td>Active</td>
+                            <td className="right">9 months ago</td>
+                      
+                        </tr>
+                                               <tr>
+                            <td>     
+                                <Checkbox />
+                            </td>
                             <td><span className="avatarInitials">YA</span></td>
                             <td>Yvonne Archer</td>
                             <td>YVonA@htomal.com</td>
@@ -53,7 +68,72 @@ class UsersPage extends Component {
                             <td>The Smart Physio</td>
                             <td>Active</td>
                             <td>9 months ago</td>
-                            <td>Menu</td>
+                         
+                        </tr>
+                                               <tr>
+                            <td>     
+                                <Checkbox />
+                            </td>
+                            <td><span className="avatarInitials">YA</span></td>
+                            <td>Yvonne Archer</td>
+                            <td>YVonA@htomal.com</td>
+                            <td>Standard</td>
+                            <td>The Smart Physio</td>
+                            <td>Active</td>
+                            <td>9 months ago</td>
+                          
+                        </tr>
+                                               <tr>
+                            <td>     
+                                <Checkbox />
+                            </td>
+                            <td><span className="avatarInitials">YA</span></td>
+                            <td>Yvonne Archer</td>
+                            <td>YVonA@htomal.com</td>
+                            <td>Standard</td>
+                            <td>The Smart Physio</td>
+                            <td>Active</td>
+                            <td>9 months ago</td>
+                   
+                        </tr>
+                                               <tr>
+                            <td>     
+                                <Checkbox />
+                            </td>
+                            <td><span className="avatarInitials">YA</span></td>
+                            <td>Yvonne Archer</td>
+                            <td>YVonA@htomal.com</td>
+                            <td>Standard</td>
+                            <td>The Smart Physio</td>
+                            <td>Active</td>
+                            <td>9 months ago</td>
+                       
+                        </tr>
+                                               <tr>
+                            <td>     
+                                <Checkbox />
+                            </td>
+                            <td><span className="avatarInitials">YA</span></td>
+                            <td>Yvonne Archer</td>
+                            <td>YVonA@htomal.com</td>
+                            <td>Standard</td>
+                            <td>The Smart Physio</td>
+                            <td>Active</td>
+                            <td>9 months ago</td>
+                 
+                        </tr>
+                                               <tr>
+                            <td>     
+                                <Checkbox />
+                            </td>
+                            <td><span className="avatarInitials">YA</span></td>
+                            <td>Yvonne Archer</td>
+                            <td>YVonA@htomal.com</td>
+                            <td>Standard</td>
+                            <td>The Smart Physio</td>
+                            <td>Active</td>
+                            <td>9 months ago</td>
+                        
                         </tr>
                     </tbody>
                 </Table>

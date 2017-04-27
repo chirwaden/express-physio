@@ -1,6 +1,7 @@
 import { injectGlobal } from 'styled-components';
 import styled from 'styled-components';
 
+
 injectGlobal`
     @font-face {
       font-family: 'Open Sans', sans-serif;
@@ -38,19 +39,22 @@ injectGlobal`
 
    
 
-input[type=checkbox] + .label-text:before{
-        content:url("checkbox_on.svg");
+/*input[type=checkbox] + .label-text:before{
+        content:"OFF";
         cursor:pointer;
         width: 24px;
         height: 24px;
     }
 
 input[type=checkbox]:checked + .label-text:before{
-        content:url("checkbox_on.svg");
-        cursor:pointer;
-        width: 24px;
+        content:"";
+        background-image:url("./images/checkboxOn.svg");
+        background-size: 24px 24px;
+        background-repeat: no-repeat;
         height: 24px;
-    }
+        width: 24px;
+        cursor:pointer;
+    }*/
 
 
 
