@@ -21,7 +21,7 @@ module.exports = function(app) {
   authRoutes.post('/login', requireLogin, AuthenticationController.login);
 
   apiRoutes.use('/users', userRoutes);
-  userRoutes.get('/list', requireAuth, UserController.listAll);
+  userRoutes.get('/', requireAuth, UserController.listAll);
 
   app.use('/api', apiRoutes);
 };

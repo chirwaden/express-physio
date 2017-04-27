@@ -23,7 +23,6 @@ export default {
 
     module: {
         loaders: [
-
             {
                 test: /\.jsx$/,
                 include: path.join(__dirname, 'client'),

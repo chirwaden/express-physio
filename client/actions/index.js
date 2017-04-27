@@ -32,21 +32,8 @@ export function errorHandler(dispatch, error, type) {
 }
 
 export function listUsers() {
-  const url = '/users/list';
+  const url = '/users/';
   return dispatch => getData(LIST_USERS, ERROR_RESPONSE, true, url, dispatch);
-
-  // return function (dispatch) {
-  //   axios.get(`${API_URL}/users/list`, {
-  //     headers: { Authorization: cookie.load('token') },
-  //   })
-  //   .then((response) => {
-  //     console.log(response);
-  //     dispatch({
-  //       type: LIST_USERS
-  //     });
-  //   })
-  //   .catch(response => dispatch(errorHandler(response.data.error)));
-  // };
 }
 
 export function loginUser({ email, password }) {  

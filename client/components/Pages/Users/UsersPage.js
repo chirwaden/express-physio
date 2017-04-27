@@ -10,6 +10,7 @@ import Checkbox from '../../Styles/Checkbox';
 class UsersPage extends Component {
     componentWillMount(){
         this.props.listUsers();
+        console.log(this.props.list);
     }
 
     render() {
@@ -24,7 +25,9 @@ class UsersPage extends Component {
                 </div>
                 <div className="PageWrapper">
                 <p>Some Content Here</p>
-
+                    
+            
+                   
                 <Table>
                     <thead>
                         <tr>
@@ -42,99 +45,23 @@ class UsersPage extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>     
-                                <Checkbox />
-                            </td>
-                            <td>
-                                <span className="avatarInitials">YA</span>
-                            </td>
-                            <td>Yvonne Archer</td>
-                            <td>YVonA@htomal.com</td>
-                            <td>Standard</td>
-                            <td>The Smart Physio</td>
-                            <td>Active</td>
-                            <td className="right">9 months ago</td>
-                      
-                        </tr>
-                                               <tr>
-                            <td>     
-                                <Checkbox />
-                            </td>
-                            <td><span className="avatarInitials">YA</span></td>
-                            <td>Yvonne Archer</td>
-                            <td>YVonA@htomal.com</td>
-                            <td>Standard</td>
-                            <td>The Smart Physio</td>
-                            <td>Active</td>
-                            <td>9 months ago</td>
-                         
-                        </tr>
-                                               <tr>
-                            <td>     
-                                <Checkbox />
-                            </td>
-                            <td><span className="avatarInitials">YA</span></td>
-                            <td>Yvonne Archer</td>
-                            <td>YVonA@htomal.com</td>
-                            <td>Standard</td>
-                            <td>The Smart Physio</td>
-                            <td>Active</td>
-                            <td>9 months ago</td>
-                          
-                        </tr>
-                                               <tr>
-                            <td>     
-                                <Checkbox />
-                            </td>
-                            <td><span className="avatarInitials">YA</span></td>
-                            <td>Yvonne Archer</td>
-                            <td>YVonA@htomal.com</td>
-                            <td>Standard</td>
-                            <td>The Smart Physio</td>
-                            <td>Active</td>
-                            <td>9 months ago</td>
-                   
-                        </tr>
-                                               <tr>
-                            <td>     
-                                <Checkbox />
-                            </td>
-                            <td><span className="avatarInitials">YA</span></td>
-                            <td>Yvonne Archer</td>
-                            <td>YVonA@htomal.com</td>
-                            <td>Standard</td>
-                            <td>The Smart Physio</td>
-                            <td>Active</td>
-                            <td>9 months ago</td>
-                       
-                        </tr>
-                                               <tr>
-                            <td>     
-                                <Checkbox />
-                            </td>
-                            <td><span className="avatarInitials">YA</span></td>
-                            <td>Yvonne Archer</td>
-                            <td>YVonA@htomal.com</td>
-                            <td>Standard</td>
-                            <td>The Smart Physio</td>
-                            <td>Active</td>
-                            <td>9 months ago</td>
-                 
-                        </tr>
-                                               <tr>
-                            <td>     
-                                <Checkbox />
-                            </td>
-                            <td><span className="avatarInitials">YA</span></td>
-                            <td>Yvonne Archer</td>
-                            <td>YVonA@htomal.com</td>
-                            <td>Standard</td>
-                            <td>The Smart Physio</td>
-                            <td>Active</td>
-                            <td>9 months ago</td>
-                        
-                        </tr>
+                     {this.props.list.map(function(user, i){
+                            return (
+                                <tr>
+                                    <td>
+                                        <Checkbox />
+                                    </td>
+                                    <td></td>
+                                    <td>{user.profile.firstName} {user.profile.lastName}</td>
+                                    <td>{user.email}</td>
+                                    <td>{user.role}</td>
+                                    <td>[organisationName]</td>
+                                    <td>[stateName]</td>
+                                    <td>{user.updatedAt}</td>
+                                </tr>
+                            )
+                    })
+                    }
                     </tbody>
                 </Table>
                 </div>
