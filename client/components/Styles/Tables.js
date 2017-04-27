@@ -13,7 +13,7 @@ const Table = styled.table`
 
         th{
             border-bottom: 1px solid #eaeaea;
-            margin:8px 0px;
+            height: 48px;
         };
 
         tr {
@@ -57,11 +57,8 @@ const Table = styled.table`
             border-radius: 20px;
             margin: 5px 0px 5px 16px;
             border-bottom: 1px solid #eaeaea;
-            
-        };
-
-
-        
+        }
+       
     };
 
     
