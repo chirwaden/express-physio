@@ -69,7 +69,7 @@ export function logoutUser() {
     dispatch({ type: UNAUTH_USER });
     cookie.remove('token', { path: '/' });
 
-    window.location.href = CLIENT_ROOT_URL + '/login';
+    window.location.href = CLIENT_ROOT_URL + '/signin';
   }
 }
 
@@ -110,6 +110,8 @@ export function postData(action, errorType, isAuthReq, url, dispatch, data) {
   });
 }
 
+
+//Get Request
 export function getData(action, errorType, isAuthReq, url, dispatch) {
   const requestUrl = API_URL + url;
   let headers = {};

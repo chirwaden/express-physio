@@ -8,9 +8,13 @@ import Table from '../../Styles/Tables';
 import Checkbox from '../../Styles/Checkbox';
 
 class UsersPage extends Component {
+    constuctor(props){
+      
+
+    }
+
     componentWillMount(){
         this.props.listUsers();
-        console.log(this.props.list);
     }
 
     render() {
@@ -26,8 +30,6 @@ class UsersPage extends Component {
                 <div className="PageWrapper">
                 <p>Some Content Here</p>
                     
-            
-                   
                 <Table>
                     <thead>
                         <tr>
@@ -45,6 +47,7 @@ class UsersPage extends Component {
                         </tr>
                     </thead>
                     <tbody>
+                 
                      {this.props.list.map(function(user, i){
                             return (
                                 <tr>
@@ -61,7 +64,8 @@ class UsersPage extends Component {
                                 </tr>
                             )
                     })
-                    }
+                     }
+                   
                     </tbody>
                 </Table>
                 </div>
@@ -73,9 +77,9 @@ class UsersPage extends Component {
 
 function mapStateToProps(state){
     return{
-        errorMessage: state.error,
-        list: state.user.profile
+        list: state.user.list
     }
 }
 
 export default connect(mapStateToProps, { listUsers })(UsersPage);
+
