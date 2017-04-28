@@ -51,7 +51,7 @@ class UsersPage extends Component {
                      {this.props.list.map(function(user, i){
                             return (
                                 <tr>
-                                    <td>
+                                    <td key={user.id}>
                                         <Checkbox />
                                     </td>
                                     <td></td>
