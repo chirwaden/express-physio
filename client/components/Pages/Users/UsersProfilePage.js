@@ -4,6 +4,7 @@ import Main from '../PagesWrapper';
 import NavigationBar from '../../NavigationBar/NavigationBar';
 import Table from '../../Styles/Tables';
 import Checkbox from '../../Styles/Checkbox';
+import ModalR from '../../Styles/Modal';
 
 
 const UserWrapper = styled.div`
@@ -66,6 +67,25 @@ margin-left: 32px;
 
 class UserProfilePage extends React.Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            visible : false
+        }
+    }
+
+    openModal() {
+        this.setState({
+            visible : true
+        });
+    }
+
+    closeModal() {
+        this.setState({
+            visible : false
+        });
+    }
+
     render() {
         return (
             
@@ -79,24 +99,44 @@ class UserProfilePage extends React.Component {
 
                 <div className="PageWrapper">
                     <h4>Profile</h4>
-                    <UserWrapper>
 
+                    <UserWrapper>
+                    
                         <Attribute>
                             <Label>Profile Image</Label>
                             <Detail>
                                 <Image>PN</Image>
                                 <Link>
-                                    <a href="#" onClick={this.toggleModal}>Change</a>
+                                    <a href="#" type="button" value="Open" onClick={() => this.openModal()}>Change</a>
+                                    
+                                    <ModalR>
+                                 
+                                            <h1>Title</h1>
+                                            <p>Profile Image</p>
+                                            <a href="javascript:void(0);" onClick={() => this.closeModal()}>Close</a>
+                            
+                                    </ModalR>
+
                                 </Link>
                             </Detail>
                         </Attribute>
-
+                        
+                        
                         <Attribute>
                             <Label>Name</Label>
                             <Detail>
                                 <span>Paul Nicholson</span>
                                 <Link>
-                                    <a href="#">Change Name</a>
+                                    <a href="#" type="button" value="Open" onClick={() => this.openModal()}>Change Name</a>
+
+                                    <ModalR>
+                                        <div>
+                                            <h1>Title</h1>
+                                            <p>Change Name Modal</p>
+                                            <a href="javascript:void(0);" onClick={() => this.closeModal()}>Close</a>
+                                        </div>
+                                    </ModalR>
+
                                 </Link>
                             </Detail>
                         </Attribute>
