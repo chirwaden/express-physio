@@ -28,7 +28,7 @@ const Main = styled.section`
         justify-content: center;
         width: 100vw;
         color: #FFFFFF;
-        background-color:#007EE5;
+        background-color:#1E7BB2;
     }
 
     .PageLocationWrapper {
@@ -37,7 +37,7 @@ const Main = styled.section`
         justify-content: flex-start;
         width: 100vw;
         max-width: 1400px;
-        padding: 0px 20px 20px 20px;
+        padding: 0px 16px 16px 16px;
         color: #FFFFFF;
         
     }

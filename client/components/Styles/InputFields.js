@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const Input = styled.input`
 
     font-family: 'Roboto', sans-serif;
-    border: 1px solid #c9c9c9;
+    border: 1px solid #CBCED3;
     color: #686E7A;
     font-size: 16px;
     font-weight: 300;
@@ -18,28 +18,28 @@ const Input = styled.input`
 
     &:focus{
         outline:none;
-        border: 2px solid #007EE5;
+        border: 2px solid #1E7BB2;
         border-radius: 3px;
         padding: 11px 14px;
     }
 
     &:focus:hover{
         outline:none;
-        border: 2px solid #007EE5;
+        border: 2px solid #1E7BB2;
         border-radius: 3px;
         padding: 11px 14px;
     }
 
     &:active{
         outline:none;
-        border: 2px solid #007EE5;
+        border: 2px solid #1E7BB2;
         border-radius: 3px;
         padding: 11px 14px;
     }
 
     &:hover{
         outline:none;
-        border: 2px solid #a6a6a6;
+        border: 2px solid #B5B7BD;
         border-radius: 3px;
         padding: 11px 14px;
     }
