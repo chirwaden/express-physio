@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { listUsers } from '../../../actions/index';
+import { Link } from 'react-router';
 import styled from 'styled-components';
 import Main from '../PagesWrapper';
 import NavigationBar from '../../NavigationBar/NavigationBar';
@@ -8,14 +9,11 @@ import Table from '../../Styles/Tables';
 import Checkbox from '../../Styles/Checkbox';
 
 class UsersPage extends Component {
-    constuctor(props){
-      
-
-    }
-
     componentWillMount(){
         this.props.listUsers();
     }
+
+
 
     render() {
         return (
@@ -48,14 +46,14 @@ class UsersPage extends Component {
                     </thead>
                     <tbody>
                  
-                     {this.props.list.map(function(user, i){
+                     {this.props.list.map(function(user, i){                         
                             return (
                                 <tr key={user._id}>
                                     <td>
                                         <Checkbox />
                                     </td>
                                     <td></td>
-                                    <td>{user.profile.firstName} {user.profile.lastName}</td>
+                                    <td><Link to={`/user/${user._id}`}>{user.profile.firstName} {user.profile.lastName}</Link></td>
                                     <td>{user.email}</td>
                                     <td>{user.role}</td>
                                     <td>[organisationName]</td>
@@ -77,7 +75,7 @@ class UsersPage extends Component {
 
 function mapStateToProps(state){
     return{
-        list: state.user.list
+        list: state.users.list
     }
 }
 

@@ -21,6 +21,11 @@ export default {
         new webpack.HotModuleReplacementPlugin()
     ],
 
+    devServer: {
+        historyApiFallback: true,
+        contentBase: './'
+    },
+
     module: {
         loaders: [
             {

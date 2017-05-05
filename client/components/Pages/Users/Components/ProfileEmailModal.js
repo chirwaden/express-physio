@@ -70,7 +70,7 @@ class ProfileEmailModal extends React.Component {
    render() {
         return (
             <section>
-                <h1>Email</h1>
+                <h1>{this.props.email}</h1>
                 <input type="button" value="Open" onClick={() => this.openModal()} />
                 <Wrapper>
                     <Modal className="modalDimentions" visible={this.state.visible} width="600px" height="433px" effect="fadeInDown">

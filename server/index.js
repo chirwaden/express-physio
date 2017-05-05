@@ -30,9 +30,14 @@ router(app);
 mongoose.Promise = require('bluebird');
 mongoose.connect(config.database);
 
-app.get('*',(req, res) => {
+//app.use(express.static(path.join(__dirname, 'public')));
+
+app.get("/", renderPage);
+app.get("*", renderPage);
+
+function renderPage(req, res) {
     res.sendFile(path.join(__dirname, './index.html'));
-});
+}
 
 server = app.listen(config.port);
 console.log(`Running on localhost:${config.port}`);

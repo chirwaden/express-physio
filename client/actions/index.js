@@ -1,7 +1,7 @@
 import axios from 'axios';  
 import { browserHistory } from 'react-router';  
 import cookie from 'react-cookie';  
-import { AUTH_USER,  AUTH_ERROR, UNAUTH_USER, PROTECTED_TEST, LIST_USERS, ERROR_RESPONSE } from './types';
+import { AUTH_USER,  AUTH_ERROR, UNAUTH_USER, PROTECTED_TEST, LIST_USERS, ERROR_RESPONSE, FETCH_USER } from './types';
 
 const API_URL = 'http://localhost:3000/api';
 const CLIENT_ROOT_URL = 'http://localhost:3000';
@@ -29,6 +29,11 @@ export function errorHandler(dispatch, error, type) {
       payload: errorMessage
     });
   }
+}
+
+export function fetchUser(user){
+  const url = `/users/${user}`;
+  return dispatch => getData(FETCH_USER, ERROR_RESPONSE, true, url, dispatch);
 }
 
 export function listUsers() {

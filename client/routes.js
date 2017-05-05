@@ -17,11 +17,17 @@ export default (
     <Route path="/" component={App}>
         <IndexRoute component={HomePage} />
         <Route path="dashboard" component={RequireAuth(Dashboard)} />
-        <Route path="clients" component={RequireAuth(ClientsPage)} />
-        <Route path="users" component={RequireAuth(UsersPage)} />
-        <Route path="userProfile" component={RequireAuth(UsersProfilePage)} />
+        <Route path="clients" component={RequireAuth(ClientsPage)} />        
         <Route path="business" component={RequireAuth(BusinessPage)} />
         <Route path="signin" component={SigninPage} />
         <Route path="signup" component={SignupPage} />
+
+
+        <Route path="users"  component={RequireAuth(UsersPage)} />
+   
+         <Route path="user/:userId" component={RequireAuth(UsersProfilePage)} />
+
+
+        <Route path="*" component={NotFoundPage} />
     </Route>
 )

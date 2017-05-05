@@ -7,3 +7,6 @@ export const AUTH_USER = 'auth_user',
 //Users
 export const LIST_USERS = 'list_users',
              ERROR_RESPONSE = 'error_response';
+
+//
+export const FETCH_USER = 'fetch_user';

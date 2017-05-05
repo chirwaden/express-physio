@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { fetchUser } from '../../../actions/index';
 import styled from 'styled-components';
 import Main from '../PagesWrapper';
 import NavigationBar from '../../NavigationBar/NavigationBar';
@@ -8,8 +10,12 @@ import ProfileEmailModal from '../Users/Components/ProfileEmailModal';
 import ProfilePasswordModal from '../Users/Components/ProfilePasswordModal';
 import Button from '../../Styles/Buttons';
 
-
-class UserProfilePage extends React.Component {
+class UserProfilePage extends Component {
+    constructor(props) {
+        super(props);
+        const { params, getUser } = this.props;
+        this.props.fetchUser(params.userId);
+    }
 
     render() {
         return (
@@ -24,17 +30,19 @@ class UserProfilePage extends React.Component {
 
                 <div className="PageWrapper">
                     <h4>Profile</h4>
-                        
+                        {
+                            console.log(this.props.profile)
+                        }
                         <div>
                             <ProfileImageModal/>
                         </div>
                         
                         <div>
-                            <ProfileNameModal/>
+                            <ProfileNameModal firstName={this.props.profile.firstName} lastName={this.props.profile.lastName}/>
                         </div>
                     
                         <div>
-                            <ProfileEmailModal/>
+                            <ProfileEmailModal email={this.props.profile.email}/>
                         </div>
                         
                          <div>
@@ -52,5 +60,12 @@ class UserProfilePage extends React.Component {
 }
 
 
-export default UserProfilePage;
+function mapStateToProps(state){
+    return{
+        profile: state.user.profile
+    }
+}
+
+export default connect(mapStateToProps, { fetchUser })(UserProfilePage);
+// export default UserProfilePage;  
 

@@ -70,7 +70,7 @@ class ProfileNameModal extends React.Component {
    render() {
         return (
             <section>
-                <h1>Name</h1>
+                <h1>{this.props.firstName} {this.props.lastName}</h1>
                 <input type="button" value="Open" onClick={() => this.openModal()} />
                 <Wrapper>
                     <Modal className="modalDimentions" visible={this.state.visible} width="600px" height="344px" effect="fadeInDown">

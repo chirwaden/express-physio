@@ -22,6 +22,8 @@ module.exports = function(app) {
 
   apiRoutes.use('/users', userRoutes);
   userRoutes.get('/', requireAuth, UserController.listAll);
+  userRoutes.get('/me', requireAuth, UserController.myDetails);
+  userRoutes.get('/:userId', requireAuth, UserController.getDetails);
 
   app.use('/api', apiRoutes);
 };
