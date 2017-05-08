@@ -4,7 +4,7 @@ const Wrapper = styled.nav`
     display: flex;
     justify-content: center;
     width: 100vw;
-    background: #1E7BB2;
+    background: #0073D2;
     padding-bottom:20px;
 `;
 

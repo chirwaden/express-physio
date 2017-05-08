@@ -26,14 +26,14 @@ const ButtonGrey = styled.a`
   
   &:hover {
      {/*background: ${(props) => props.primary ? '#47525D' : 'white'};*/}
-      color: ${(props) => props.primary ? 'white' : '#007EE5'};
+      color: ${(props) => props.primary ? 'white' : '#0073D2'};
       opacity: 1;
       border: 1px solid #007EE5;
   }
 
   &:active {
-      background: ${(props) => props.primary ? '#007EE5' : 'white'};
-      color: ${(props) => props.primary ? 'white' : '#007EE5'};
+      background: ${(props) => props.primary ? '#0073D2' : 'white'};
+      color: ${(props) => props.primary ? 'white' : '#0073D2'};
       box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.3);
       opacity: 0.8;      
   }

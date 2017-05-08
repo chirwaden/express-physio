@@ -28,7 +28,7 @@ const Main = styled.section`
         justify-content: center;
         width: 100vw;
         color: #FFFFFF;
-        background-color:#1E7BB2;
+        background-color:#0073D2;
     }
 
     .PageLocationWrapper {

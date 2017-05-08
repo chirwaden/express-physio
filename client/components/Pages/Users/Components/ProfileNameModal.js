@@ -17,6 +17,30 @@ const Wrapper = styled.div `
 
 `;
 
+const NameWrapper = styled.div`
+
+    display: flex;
+    align-items: center;
+
+    
+
+    a {
+        margin-left: 32px;
+        text-decoration: none;
+
+        &:hover {
+            color: #00569E;
+            text-decoration: underline;
+        }
+
+        &:visited {
+            color: #0073D2;
+
+        }
+    }
+
+`;
+
 const FormWrapper = styled.div`
     flex: 1;
     display: flex;
@@ -70,8 +94,13 @@ class ProfileNameModal extends React.Component {
    render() {
         return (
             <section>
-                <h1>{this.props.firstName} {this.props.lastName}</h1>
-                <input type="button" value="Open" onClick={() => this.openModal()} />
+                
+                <NameWrapper>
+                
+                    <p>{this.props.firstName} {this.props.lastName}</p>
+                    <a href="#" onClick={() => this.openModal()}>Change</a>
+                </NameWrapper>
+
                 <Wrapper>
                     <Modal className="modalDimentions" visible={this.state.visible} width="600px" height="344px" effect="fadeInDown">
                         <FormWrapper>

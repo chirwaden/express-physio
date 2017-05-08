@@ -18,7 +18,7 @@ const Input = styled.input`
 
     &:focus{
         outline:none;
-        border: 2px solid #1E7BB2;
+        border: 2px solid #0073D2;
         border-radius: 3px;
         padding: 11px 14px;
     }

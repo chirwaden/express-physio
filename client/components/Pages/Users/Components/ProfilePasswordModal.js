@@ -33,6 +33,30 @@ const FormContent = styled.div`
 
 `;
 
+const PassWrapper = styled.div`
+
+    display: flex;
+    align-items: center;
+
+    
+
+    a {
+        margin-left: 32px;
+        text-decoration: none;
+
+        &:hover {
+            color: #00569E;
+            text-decoration: underline;
+        }
+
+        &:visited {
+            color: #0073D2;
+
+        }
+    }
+
+`;
+
 const ButtonWrapper = styled.div`
     flex: 1;
     display: flex;
@@ -70,8 +94,10 @@ class ProfilePasswordModal extends React.Component {
    render() {
         return (
             <section>
-                <h1>Password</h1>
-                <input type="button" value="Open" onClick={() => this.openModal()} />
+                <PassWrapper>
+                    <p>Password</p>
+                    <a href="#" onClick={() => this.openModal()}>Change</a>
+                </PassWrapper>
                 <Wrapper>
                     <Modal className="modalDimentions" visible={this.state.visible} width="600px" height="344px" effect="fadeInDown">
                         <FormWrapper>

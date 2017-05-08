@@ -33,6 +33,28 @@ const FormContent = styled.div`
 
 `;
 
+const Email = styled.div`
+
+    display: flex;
+    align-items: center;
+
+    a {
+        margin-left: 32px;
+        text-decoration: none;
+
+        &:hover {
+            color: #00569E;
+            text-decoration: underline;
+        }
+
+        &:visited {
+            color: #0073D2;
+
+        }
+    }
+
+`;
+
 const ButtonWrapper = styled.div`
     flex: 1;
     display: flex;
@@ -70,12 +92,14 @@ class ProfileEmailModal extends React.Component {
    render() {
         return (
             <section>
-                <h1>{this.props.email}</h1>
-                <input type="button" value="Open" onClick={() => this.openModal()} />
+                <Email>
+                    <p>{this.props.email}</p>
+                    <a href="#" onClick={() => this.openModal()}>Change</a>
+                </Email>
                 <Wrapper>
-                    <Modal className="modalDimentions" visible={this.state.visible} width="600px" height="433px" effect="fadeInDown">
+                    <Modal className="modalDimentions" visible={this.state.visible} width="600px" height="433px">
                         <FormWrapper>
-                        <h2>Update 'some@email.com'</h2>
+                        <h2>Update '{this.props.email}'</h2>
                             <FormContent>
                             <label>New email</label>
                             <Input />

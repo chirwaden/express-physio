@@ -32,6 +32,28 @@ const FormContent = styled.div`
 
 `;
 
+const ImageWrapper = styled.div`
+
+    display: flex;
+    align-items: center;
+
+    a {
+        margin-left: 32px;
+        text-decoration: none;
+
+        &:hover {
+            color: #00569E;
+            text-decoration: underline;
+        }
+
+        &:visited {
+            color: #0073D2;
+
+        }
+    }
+
+`;
+
 const ButtonWrapper = styled.div`
     flex: 1;
     display: flex;
@@ -69,8 +91,11 @@ class ProfileImageModal extends React.Component {
    render() {
         return (
             <section>
-                <h1>Profile Image</h1>
-                <input type="button" value="Open" onClick={() => this.openModal()} />
+
+                <ImageWrapper>
+                    <p>Profile Image Here</p>
+                    <a href="#" onClick={() => this.openModal()}>Change</a>
+                </ImageWrapper>
                 <Wrapper>
                     <Modal className="modalDimentions" visible={this.state.visible} width="600px" height="216px" effect="fadeInDown">
                         <FormWrapper>
