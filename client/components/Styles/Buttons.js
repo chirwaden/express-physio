@@ -21,7 +21,7 @@ const Button = styled.button`
   box-shadow: none;
   margin: 2px 0px 0px 0px;
   outline: none;
-  transition: opacity .2s, margin .2s, box-shadow .2s, background .15s ease-in-out;
+  transition: opacity .2s, margin .2s, background .15s ease-in-out;
   
   &:hover {
       background: ${(props) => props.primary ? '#00569E' : '#FFFFFF'};
@@ -30,15 +30,13 @@ const Button = styled.button`
   }
 
   &:active {
-      background: ${(props) => props.primary ? '#1E7BB2' : '#FFFFFF'};
-      color: ${(props) => props.primary ? '#FFFFFF' : '#1E7BB2'};
-      box-shadow: 0px 4px 8px 0px rgba(24, 29, 38, 0.3)   ;
+      background: ${(props) => props.primary ? '#003A69' : '#FFFFFF'};
+      color: ${(props) => props.primary ? '#FFFFFF' : '#003A69'};
   }
 
     &:focus {
       background: ${(props) => props.primary ? '#1E7BB2' : '#FFFFFF'};
       color: ${(props) => props.primary ? '#FFFFFF' : '#1E7BB2'};
-      box-shadow: 0px 4px 8px 0px rgba(24, 29, 38, 0.3);
   }
 `;
 
