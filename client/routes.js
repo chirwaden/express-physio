@@ -6,6 +6,7 @@ import HomePage from './components/Pages/Homepage/Index';
 import Dashboard from './components/Pages/Dashboard/DashboardPage';
 import SigninPage from './components/Pages/Signin/SigninPage';
 import SignupPage from './components/Pages/Signup/SignupPage';
+import SignupOrgPage from './components/Pages/Signup_Org/SignupOrgPage';
 import ClientsPage from './components/Pages/Clients/ClientsPage';
 import UsersPage from './components/Pages/Users/UsersPage';
 import UsersProfilePage from './components/Pages/Users/UsersProfilePage';
@@ -21,6 +22,7 @@ export default (
         <Route path="business" component={RequireAuth(BusinessPage)} />
         <Route path="signin" component={SigninPage} />
         <Route path="signup" component={SignupPage} />
+        <Route path="organisation-signup" component={SignupOrgPage} />
 
 
         <Route path="users"  component={RequireAuth(UsersPage)} />

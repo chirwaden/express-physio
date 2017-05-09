@@ -16,7 +16,6 @@ const Button = styled.button`
   max-height: 40px;
   height: 40px;
   text-align: center;
-  /*line-height: 40px;*/
   cursor:pointer;
   box-shadow: none;
   margin: 2px 0px 0px 0px;
@@ -24,19 +23,19 @@ const Button = styled.button`
   transition: opacity .2s, margin .2s, background .15s ease-in-out;
   
   &:hover {
-      background: ${(props) => props.primary ? '#00569E' : '#FFFFFF'};
+      background: ${(props) => props.primary ? '#00569E' : '#F0F8FE'};
       color: ${(props) => props.primary ? '#FFFFFF' : '#00569E'};
-      border: ${(props) => props.primary ? 'none' : '2px solid #00569E'};
-  }
-
-  &:active {
-      background: ${(props) => props.primary ? '#003A69' : '#FFFFFF'};
-      color: ${(props) => props.primary ? '#FFFFFF' : '#003A69'};
+      border: ${(props) => props.primary ? 'none' : '1px solid #0073D2'};
   }
 
     &:focus {
-      background: ${(props) => props.primary ? '#1E7BB2' : '#FFFFFF'};
-      color: ${(props) => props.primary ? '#FFFFFF' : '#1E7BB2'};
+      background: ${(props) => props.primary ? '#00569E' : '#FFFFFF'};
+      color: ${(props) => props.primary ? '#FFFFFF' : '#00569E'};
+  }
+
+    &:active {
+      background: ${(props) => props.primary ? '#003A69' : '#E2F1FE'};
+      color: ${(props) => props.primary ? '#FFFFFF' : '#003A69'};
   }
 `;
 
