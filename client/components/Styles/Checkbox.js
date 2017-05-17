@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import checkOn from './Images/checkboxOn.svg';
 
 
 
@@ -28,7 +29,7 @@ const Label = styled.label`
     }
 
     input[type=checkbox]:checked + .label-text:before{
-        content:".....";
+        content:"{checkOn}";
         color: #007EE5;
         border: solid 1px #007EE5;
         border-radius: 3px;

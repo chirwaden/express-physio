@@ -14,7 +14,7 @@ const Menu = styled.div`
         display:flex;
         justify-content: center;
         align-items: center;
-        text-transform: uppercase;
+        text-transform: capitalize;
         width: 32px;
         height: 32px;
         background-color: #47525D;
@@ -30,9 +30,9 @@ const Menu = styled.div`
     }
 
     a {
-        color: #FFFFFF !important;
+        color: #95989A !important;
         text-decoration: none;
-        text-transform: uppercase;
+        text-transform: capitalize;
         font-size: 1em;
         font-weight: 300;
         padding: 20px;
@@ -108,7 +108,7 @@ const Menu = styled.div`
                     display: flex;
                     color: #47525D !important;
                     text-decoration: none;
-                    text-transform: none;
+                    text-transform: capitalize;
                     padding: 14px 20px;
                     font-weight: 500;
                     width:100%;
@@ -118,7 +118,7 @@ const Menu = styled.div`
                 a:hover  {
                     text-decoration: none;
                     color: #47525D !important;
-                    background-color: #eaeaea;
+                    background-color: #fafafa;
                     /*background-color: #F6F8FA;*/
                 }
             }

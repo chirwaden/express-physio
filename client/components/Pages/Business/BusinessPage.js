@@ -9,9 +9,9 @@ class BusinessPage extends React.Component {
             <Main>
                 <NavigationBar />
                 <div className="PageLocation">
-                    <div className="PageLocationWrapper">
+                    {/*<div className="PageLocationWrapper">
                         <h1>Business</h1>
-                    </div>
+                    </div>*/}
                 </div>
                 <div className="PageWrapper">
                     <p>Some Content Here</p>

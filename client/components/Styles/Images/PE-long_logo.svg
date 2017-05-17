@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-5883 904 716 303">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Artboard_1);
+      }
+
+      .cls-2 {
+        fill: #3bc0dd;
+      }
+
+      .cls-2, .cls-3 {
+        opacity: 0.704;
+      }
+
+      .cls-3 {
+        fill: #4caaf5;
+      }
+
+      .cls-4 {
+        fill: #95989a;
+        font-size: 70px;
+        font-family: Helvetica-Light, Helvetica;
+      }
+
+      .cls-4, .cls-6 {
+        font-weight: 300;
+      }
+
+      .cls-5 {
+        font-family: Helvetica;
+        font-weight: 400;
+      }
+
+      .cls-6, .cls-8 {
+        fill: #fff;
+      }
+
+      .cls-6 {
+        font-size: 60px;
+        font-family: HelveticaNeue-Light, Helvetica Neue;
+        letter-spacing: -0.202em;
+      }
+
+      .cls-7 {
+        font-family: HelveticaNeue-Bold, Helvetica Neue;
+        font-weight: 700;
+      }
+    </style>
+    <clipPath id="clip-Artboard_1">
+      <rect x="-5883" y="904" width="716" height="303"/>
+    </clipPath>
+  </defs>
+  <g id="Artboard_1" data-name="Artboard – 1" class="cls-1">
+    <rect class="cls-8" x="-5883" y="904" width="716" height="303"/>
+    <ellipse id="ellipse-3" class="cls-2" cx="100.942" cy="68.11" rx="100.942" ry="68.11" transform="translate(-5884 1111.005) rotate(-45)"/>
+    <ellipse id="ellipse-3-2" data-name="ellipse-3" class="cls-3" cx="100.942" cy="68.11" rx="100.942" ry="68.11" transform="translate(-5787.678 905.38) rotate(45)"/>
+    <text id="Some_title_here" data-name="Some title here" class="cls-4" transform="translate(-5666 1083)"><tspan x="0" y="0">Physio</tspan><tspan class="cls-5" y="0">Express</tspan></text>
+    <text id="PE" class="cls-6" transform="translate(-5774 1079)"><tspan x="0" y="0">P</tspan><tspan class="cls-7" y="0">e</tspan></text>
+  </g>
+</svg>

@@ -13,17 +13,15 @@ class UsersPage extends Component {
         this.props.listUsers();
     }
 
-
-
     render() {
         return (
             
             <Main>
                 <NavigationBar />
                 <div className="PageLocation">
-                    <div className="PageLocationWrapper">
+                    {/*<div className="PageLocationWrapper">
                         <h1>Users</h1>
-                    </div>
+                    </div>*/}
                 </div>
                 <div className="PageWrapper">
                 <p>Some Content Here</p>

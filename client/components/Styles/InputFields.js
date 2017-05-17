@@ -18,28 +18,28 @@ const Input = styled.input`
 
     &:focus{
         outline:none;
-        border: 2px solid #E3E5E8;
+        border: 2px solid #43cce2;
         border-radius: 3px;
         padding: 11px 14px;
     }
 
     &:focus:hover{
         outline:none;
-        border: 2px solid #1E7BB2;
+        border: 2px solid #43cce2;
         border-radius: 3px;
         padding: 11px 14px;
     }
 
     &:active{
         outline:none;
-        border: 2px solid #1E7BB2;
+        border: 2px solid #43cce2;
         border-radius: 3px;
         padding: 11px 14px;
     }
 
     &:hover{
         outline:none;
-        border: 2px solid #B5B7BD;
+        border: 2px solid #43cce2;
         border-radius: 3px;
         padding: 11px 14px;
     }

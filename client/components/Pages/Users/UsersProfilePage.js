@@ -23,12 +23,13 @@ class UserProfilePage extends Component {
             <Main>
                 <NavigationBar />
                 <div className="PageLocation">
-                    <div className="PageLocationWrapper">
-                        <h1>Account Settings</h1>
-                    </div>
+                    {/*<div className="PageLocationWrapper">
+                        
+                    </div>*/}
                 </div>
 
                 <div className="PageWrapper">
+                    <h1>Account Settings</h1>
                     <h4>Profile</h4>
                         {
                             console.log(this.props.profile)
@@ -49,8 +50,7 @@ class UserProfilePage extends Component {
                             <ProfilePasswordModal/>
                         </div>
 
-                        <Button>Cancel</Button>
-                        <Button primary>Save Settings</Button>
+                      
 
                 </div>
             </Main>

@@ -36,6 +36,21 @@ injectGlobal`
         font-weight: 300;
     }
 
+    a {
+        margin-left: 32px;
+        text-decoration: none;
+        color: #2c9ab7;
+
+        &:hover {
+            color: #2c9ab7;
+            text-decoration: underline;
+        }
+
+        &:visited {
+            color: #2c9ab7;
+
+        }
+    }
     
 
 

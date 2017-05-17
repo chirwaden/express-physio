@@ -40,14 +40,15 @@ const ImageWrapper = styled.div`
     a {
         margin-left: 32px;
         text-decoration: none;
+        color: #2c9ab7;
 
         &:hover {
-            color: #00569E;
+            color: #2c9ab7;
             text-decoration: underline;
         }
 
         &:visited {
-            color: #0073D2;
+            color: #2c9ab7;
 
         }
     }

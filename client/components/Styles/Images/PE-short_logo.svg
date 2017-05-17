@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-5883 1291 233 303">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Artboard_2);
+      }
+
+      .cls-2 {
+        fill: #3bc0dd;
+      }
+
+      .cls-2, .cls-3 {
+        opacity: 0.704;
+      }
+
+      .cls-3 {
+        fill: #4caaf5;
+      }
+
+      .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-6 {
+        opacity: 0;
+      }
+
+      .cls-4 {
+        font-size: 60px;
+        font-family: HelveticaNeue-Light, Helvetica Neue;
+        font-weight: 300;
+        letter-spacing: -0.202em;
+      }
+
+      .cls-5 {
+        font-family: HelveticaNeue-Bold, Helvetica Neue;
+        font-weight: 700;
+      }
+    </style>
+    <clipPath id="clip-Artboard_2">
+      <rect x="-5883" y="1291" width="233" height="303"/>
+    </clipPath>
+  </defs>
+  <g id="Artboard_2" data-name="Artboard – 2" class="cls-1">
+    <rect class="cls-6" x="-5883" y="1291" width="233" height="303"/>
+    <ellipse id="ellipse-3" class="cls-2" cx="100.942" cy="68.11" rx="100.942" ry="68.11" transform="translate(-5884 1498.005) rotate(-45)"/>
+    <ellipse id="ellipse-3-2" data-name="ellipse-3" class="cls-3" cx="100.942" cy="68.11" rx="100.942" ry="68.11" transform="translate(-5787.678 1292.38) rotate(45)"/>
+    <!--<text id="PE" class="cls-4" transform="translate(-5774 1466)"><tspan x="0" y="0">P</tspan><tspan class="cls-5" y="0">e</tspan></text>-->
+  </g>
+</svg>

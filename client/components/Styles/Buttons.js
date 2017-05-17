@@ -4,9 +4,9 @@ import styled from 'styled-components';
 // Create an <Input> component that'll render an <input> tag with some styles
 const Button = styled.button`
   /* Adapt the colors based on primary prop */
-  background: ${(props) => props.primary ? '#0073D2' : '#FFFFFF'};
-  color: ${(props) => props.primary ? '#FFFFFF' : '#0073D2'}; 
-  border: ${(props) => props.primary ? 'none' : '1px solid #0073D2'}; 
+  background: ${(props) => props.primary ? '#52bad5' : '#FFFFFF'};
+  color: ${(props) => props.primary ? '#FFFFFF' : '#52bad5'}; 
+  border: ${(props) => props.primary ? 'none' : 'none'}; 
 
   font-size: 1em;
   font-weight: 300;
@@ -23,19 +23,20 @@ const Button = styled.button`
   transition: opacity .2s, margin .2s, background .15s ease-in-out;
   
   &:hover {
-      background: ${(props) => props.primary ? '#00569E' : '#F0F8FE'};
-      color: ${(props) => props.primary ? '#FFFFFF' : '#00569E'};
-      border: ${(props) => props.primary ? 'none' : '1px solid #0073D2'};
+      background: ${(props) => props.primary ? '#2C9AB7' : '#E9F5F8'};
+      color: ${(props) => props.primary ? '#FFFFFF' : '#52bad5'};
+      border: ${(props) => props.primary ? 'none' : 'none'};
   }
 
     &:focus {
-      background: ${(props) => props.primary ? '#00569E' : '#FFFFFF'};
-      color: ${(props) => props.primary ? '#FFFFFF' : '#00569E'};
+      background: ${(props) => props.primary ? '#52BAD5' : '#FFFFFF'};
+      color: ${(props) => props.primary ? '#FFFFFF' : '#52bad5'};
   }
 
     &:active {
-      background: ${(props) => props.primary ? '#003A69' : '#E2F1FE'};
-      color: ${(props) => props.primary ? '#FFFFFF' : '#003A69'};
+      background: ${(props) => props.primary ? '#48A5BD' : '#E9F5F8'};
+      color: ${(props) => props.primary ? '#FFFFFF' : '#52bad5'};
+      border: ${(props) => props.primary ? 'none' : '2px solid #DFF0F4'};
   }
 `;
 

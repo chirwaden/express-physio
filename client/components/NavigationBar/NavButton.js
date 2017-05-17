@@ -8,30 +8,34 @@ import NavWrapper from './NavWrapper';
 
 
 const LinkWrapper = styled.div`
-    margin-top:20px;
+    padding:19px 0px;
 
     a {
-        color: #FFFFFF !important;
+        color: #48484A;
         text-decoration: none;
-        text-transform: uppercase;
+        text-transform: capitalize;
         font-size: 1em;
         font-weight: 300;
-        padding: 20px;
+        padding: 19px 18px;
+        border-bottom: 3px solid transparent;
     }
     a:hover  {
         text-decoration: none;
-        opacity: 0.5;
-        transition: opacity .2s ease-in-out;
+        transition: color .2s, border-bottom .2s ease-in-out;
+        background-color: #e5e5e5;
+        transition: background-color .2s ease-in-out;
+
     }
-    .active {
+    .active, .active:hover {
         text-decoration: none;
-        opacity: 0.5;
-        transition: opacity .2s ease-in-out;
+        border-bottom: 3px solid #43cce2;
+        transition: border-bottom .2s ease-in-out;
+        
     }
 `;
 
 class NavButton extends React.Component {
-    
+   
     render() {
         return (
             <LinkWrapper>

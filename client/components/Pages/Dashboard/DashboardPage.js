@@ -9,10 +9,10 @@ class DashboardPage extends React.Component {
             <Main>
                 <NavigationBar />
                 <div className="PageLocation">
-                    <div className="PageLocationWrapper">
+                    {/*<div className="PageLocationWrapper">
                         
                         <h1>Dashboard</h1>
-                    </div>
+                    </div>*/}
                 </div>
                 <div className="PageWrapper">
                 <p>Some Content Here</p>

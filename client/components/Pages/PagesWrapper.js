@@ -18,7 +18,7 @@ const Main = styled.section`
         max-width: 1400px;
         padding: 0px 20px;
         margin: 0px;
-        height: calc(100vh - 122px);
+        height: calc(100vh - 60px);
         overflow-y:scroll;
     }
     

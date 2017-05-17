@@ -6,6 +6,14 @@ const NavWrapper = styled.section`
     justify-content: flex-start;
     width: 100vw;
     max-width: 1400px;
+
+    > .navigationBar_bar {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 40px;
+    }
     
     > .navigationBar_bar {
         display: flex;
@@ -19,7 +27,7 @@ const NavWrapper = styled.section`
             > a {
                 color: #FFFFFF !important;
                 text-decoration: none;
-                text-transform: uppercase;
+           
                 font-size: 1em;
                 font-weight: 300;
                 padding: 20px;
